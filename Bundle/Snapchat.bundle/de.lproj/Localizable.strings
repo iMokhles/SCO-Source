@@ -1,0 +1,98 @@
+"STORIES_TITLE" = "Stories";
+"STORIES_SHOW_DOWNLOAD_BUTTON" = "zeige den Download Knopf für Stories";
+"STORIES_MANUALLY_MARK_SEEN" = "Stories selbst als gesehen markieren";
+"STORIES_DISABLE_DISCOVERY" = "Discovery deaktivieren";
+"SHOW_STORIES_TIME" = "Timer-Geschichten anzeigen";
+
+// 2017-6-8
+"THANK2" = "Thanks | Fahd Al-Juwaisri";
+"THANK3" = "Thanks | Khalid Al-Dosari";
+"REESTABLISH" = "Lesen Sie den Chat ohne Wissen anderer";
+"MASSAGE_REESTABLISH" = "Wenn Sie diese Funktion aktivieren, können Sie nicht nur private Nachrichten senden. Sie können die Nachrichten lesen, ohne zu wissen, dass Sie sie gelesen haben,";
+"TYPING" = "Deaktivieren Sie für die andere Partei schriftlich";
+"TEXT_LINE" = "Füge neue Zeile beim Schreiben hinzu";
+"SC_LOOPS" = "Deaktivieren Wiederholen Play Snap im Stori";
+
+
+"CHATS_TITLE" = "Chats";
+"CHATS_MANUALLY_MARK_SEEN" = "Snaps selbst als gesehen Markieren";
+"CHATS_SHOW_DOWNLOAD_BUTTON" = "Zeige den download Knopf für Snaps";
+"CHATS_DISABLE_SCREENSHOT" = "Screenshot Meldung deaktivieren";
+"CHATS_AUTO_SAVE_MESSAGE" = "Automatisches speichern der Chat Nachrichten";
+
+"SAVE_SETTINGS_TITLE" = "Einstellung Speichern";
+"SAVE_NO_CONFIRMATION_ALERT" = "Aktivieren Spar Warnungen";
+"SAVE_CUSTOM_ALBUM_ENABLE" = "In eigenen Ordner speichern";
+"SAVE_CUSTOM_ALBUM_NAME" = "Album Name";
+
+"ADDONS_TITLE" = "Addons";
+"UPLOAD_FROM_GALLERY" = "Medien von der Galerie hochladen";
+"IMAGE_EDITOR" = "Foto bearbeiten";
+"TAP_TO_RECORD_VIDEO" = "Langer Tipp, um Videos aufzunehmen";
+"INCREASE_VIDEO_DURATION" = "50 sec Videoaufnahme";
+"INCREASE_VIDEO_DURATION_DESC" = "Wenn die Aufnahme für 50 Sekunden aktiviert ist, schließen Sie bitte die Anwendung aus dem Hintergrund und öffnen Sie sie erneut, um erfolgreich zu arbeiten";
+
+"LOCATION_ENABLE" = "Standort ändern";
+"LOCATION_CHOOSE" = "auswählen";
+
+"FILTERS_ENABLE" = "veränderte Filter aktivieren";
+"FILTERS_VIEW" = "Filters";
+"DisableNewSnapchat" = "Disable New Snapchat";
+
+"SAVE_ALERT_IMAGE" = "📱 Foto 📷 in Galerie speichern";
+"SAVE_ALERT_VIDEO" = "📱 Video 🎥 in Galerie „speichern";
+"SAVE_ALERT_CANCEL" = "❌ Abbrechen";
+"SAVE_ALERT_CONFIRM" = "✅ Sichern";
+
+
+"SETTINGS_ALERT_SNAPCHAT" = "SnapChats Einstellungen 👻";
+"SETTINGS_ALERT_SCOTHMAN" = "SCOthman💛 Einstellungen 👻";
+"SETTINGS" = "Einstellungen ⚙️";
+"CANCEL" = "Abbrechen";
+
+"LOCAL_FILTERS" = "Filter auf deinem Gerät";
+"DELETE_FILTER" = "Filter löschen";
+"THIS_WILL_REMOVE" = "Das wird den Filter von deinem Gerät löschen.";
+"DELETE" = "löschen";
+"ADD_FILTER" = "Filter hinzufügen";
+"OPEN_FOLDER" = "Ordner öffnen";
+"CHOOSE_IMAGE" = "Bild auswählen";
+"MSG_FILTER" = "Filter sollten das Format PNG von\n1080 x 1920 (9:16 ratio)\nDu kannst Filter von der Gallery oder selbst in den Filter order hinzufügen.";
+"OPEN" = "öffnen";
+"FILTERS_FOLDER" = "Filter Ordner";
+"FILTERS_FOLDER (%zd/%zd)" = "Filter Ordner (%zd/%zd)";
+
+"CITIES" = "Ändere deinen Standort";
+"CUSTOM" = "Veränderter von der Karte";
+
+"NAME" = "Name";
+"CANCEL_F" = "abbrechen";
+"DONE" = "gesichert";
+"OPEN_FILZA" = "in Filza öffnen";
+"OPEN_IFILE" = "in iFile öffnen";
+"SUPPORT_PAYPAL" = "Spenden via PayPal";
+"PAYPAL" = "Spenden";
+"THANK" = "Danke";
+"WEBSITE" = "Senden Sie einen Kommentar";
+"VERSION" = "SCOthman Version";
+"TANSLATION" = "übersetzen";
+"ABOUT" = "Über den Entwickler";
+"FRIEND_GROUPS" = "Freund Gruppen";
+"MANAGE_GROUPS" = "Gruppen verwalten ⚙";
+"MANAGER" = "Manager";
+"EDIT_GROUP" = "Gruppe bearbeiten";
+"NEW_GROUP" = "Neue Gruppe";
+"GROUPS" = "Gruppen";
+"GROUP_NAME" = "Gruppen name";
+"FRIENDS" = "Freunde";
+"APP_PASSWORD_TITLE" = "App Passcode";
+"APP_PASSWORD_DELETE" = "Delete Passcode";
+"APP_PASSWORD_ENABLE" = "Enable Passcode";
+
+"SNAP6" = "Activate video recording 6 Snaps";
+"HD_PHOTO" = "Activate High Quality Image Upload";
+"BLOCKCALL" = "Block incoming call";
+"IPHONEX" = "Do not zoom video upload for iPhone";
+"IPHONEX_AL" = "Video upload fix from iPhoneX and no video zoom \n Note: When activating this feature please do not close the application from the background so as not to affect the dimensions of the application on the iPhone screen";
+"NewSnapchat" = "The application will be shut down from the background and restarted until the feature is enabled \n Note: This feature works on version 10.27.1 and less only";
+

@@ -1,0 +1,98 @@
+"STORIES_TITLE" = "Storie";
+"STORIES_SHOW_DOWNLOAD_BUTTON" = "Mostra Tasto Download Storie";
+"STORIES_MANUALLY_MARK_SEEN" = "Segna Manualmente Visione Storie";
+"STORIES_DISABLE_DISCOVERY" = "Disabilita Discover";
+"SHOW_STORIES_TIME" = "Mostra le storie del time";
+
+// 2017-6-8
+"THANK2" = "Thanks | Fahd Al-Juwaisri";
+"THANK3" = "Thanks | Khalid Al-Dosari";
+"REESTABLISH" = "Leggi la chat senza la conoscenza di altri";
+"MASSAGE_REESTABLISH" = "Quando si attiva questa funzione non è possibile inviare solo i messaggi privati. È possibile leggere i messaggi senza sapere che li avete letto";
+"TYPING" = "Disabilitare la scrittura per l'altra parte";
+"TEXT_LINE" = "Aggiungere nuova riga durante la scrittura";
+"SC_LOOPS" = "Disattiva ripetizione riproduzione Snap nello Stori";
+
+
+"CHATS_TITLE" = "Chat";
+"CHATS_MANUALLY_MARK_SEEN" = "Segna Manualmente Visione Snap";
+"CHATS_SHOW_DOWNLOAD_BUTTON" = "Mostra Tasto Download Snap";
+"CHATS_DISABLE_SCREENSHOT" = "Disabilita Notifica Screenshot";
+"CHATS_AUTO_SAVE_MESSAGE" = "Salva Automaticamente Messaggi Chat";
+
+"SAVE_SETTINGS_TITLE" = "Salva Impostazioni";
+"SAVE_NO_CONFIRMATION_ALERT" = "Messaggio Conferma";
+"SAVE_CUSTOM_ALBUM_ENABLE" = "Salva in Album Personalizzato";
+"SAVE_CUSTOM_ALBUM_NAME" = "Nome Album";
+
+"ADDONS_TITLE" = "Addons";
+"UPLOAD_FROM_GALLERY" = "Carica Media dalla Galleria";
+"IMAGE_EDITOR" = "Modifica Foto";
+"TAP_TO_RECORD_VIDEO" = "Pressione Lunga per Registrare Video";
+"INCREASE_VIDEO_DURATION" = "Video da 50 sec";
+"INCREASE_VIDEO_DURATION_DESC" = "Quando la registrazione viene attivata per 50 secondi, chiudere l'applicazione dal fondo e aprire nuovamente per funzionare correttamente";
+
+"LOCATION_ENABLE" = "Modifica la tua Posizione";
+"LOCATION_CHOOSE" = "Scegli";
+"NewSnapchat" = "The application will be shut down from the background and restarted until the feature is enabled \n Note: This feature works on version 10.27.1 and less only";
+
+"FILTERS_ENABLE" = "Attiva Filtri Personalizzati";
+"FILTERS_VIEW" = "Filtri";
+"DisableNewSnapchat" = "Disable New Snapchat";
+
+"SAVE_ALERT_IMAGE" = "📱 Salva Foto 📷 in Galleria";
+"SAVE_ALERT_VIDEO" = "📱 Salva Video 🎥 in Galleria";
+"SAVE_ALERT_CANCEL" = "❌ Chiudi";
+"SAVE_ALERT_CONFIRM" = "✅ Salva";
+
+"SETTINGS_ALERT_SNAPCHAT" = "Impostazioni SnapChat 👻";
+"SETTINGS_ALERT_SCOTHMAN" = "Impostazioni SCOthman💛 👻";
+"SETTINGS" = "Impostazioni ⚙️";
+"CANCEL" = "Chiudi";
+
+"LOCAL_FILTERS" = "Filtri in Locale";
+"DELETE_FILTER" = "Elimina Filtro";
+"THIS_WILL_REMOVE" = "Eliminerà il filtro dal tuo dispositivo.";
+"DELETE" = "Cancella";
+"ADD_FILTER" = "Aggiungi Filtro";
+"OPEN_FOLDER" = "Apri Cartella";
+"CHOOSE_IMAGE" = "Scegli Immagine";
+"MSG_FILTER" = "L'Immagine filto è meglio che sia PNG di\n1080 x 1920 (9:16)\nPuoi aggiungere immagini dalla galleria or manualmente nella cartella dei filtri.";
+"OPEN" = "Apri";
+"FILTERS_FOLDER" = "Cartella Filtri";
+"FILTERS_FOLDER (%zd/%zd)" = "Cartella Filtri (%zd/%zd)";
+
+"CITIES" = "Cambia la tua Localizzazione";
+"CUSTOM" = "Personalizzata dalla Mappa";
+
+"NAME" = "Nome";
+"CANCEL_F" = "Chiudi";
+"DONE" = "Salvato";
+"OPEN_FILZA" = "Apri in Filza";
+"OPEN_IFILE" = "Apri in iFile";
+"SUPPORT_PAYPAL" = "Dona con PayPal";
+"PAYPAL" = "Dona";
+"THANK" = "Grazie";
+"WEBSITE" = "Invia un commento";
+"DEVELOPIR" = "Sviluppatore Othman Al-Omiry";
+"COPYRIGHT" = "Copyright © 2017 Othman Al-Omiry. All rights reserved.";
+"VERSION" = "Versione SCOthman";
+"TANSLATION" = "Traduci";
+"ABOUT" = "About the developer";
+"MANAGE_GROUPS" = "Gestisci Gruppi ⚙";
+"MANAGER" = "Manager";
+"EDIT_GROUP" = "Modifica gruppo";
+"NEW_GROUP" = "Nuovo gruppo";
+"GROUPS" = "Gruppi";
+"GROUP_NAME" = "Nome del gruppo";
+"FRIENDS" = "Amici";
+"FRIEND_GROUPS" = "Gruppi amici";
+
+"APP_PASSWORD_TITLE" = "App Passcode";
+"APP_PASSWORD_DELETE" = "Delete Passcode";
+"APP_PASSWORD_ENABLE" = "Enable Passcode";
+"SNAP6" = "Activate video recording 6 Snaps";
+"HD_PHOTO" = "Activate High Quality Image Upload";
+"BLOCKCALL" = "Block incoming call";
+"IPHONEX" = "Do not zoom video upload for iPhone";
+"IPHONEX_AL" = "Video upload fix from iPhoneX and no video zoom \n Note: When activating this feature please do not close the application from the background so as not to affect the dimensions of the application on the iPhone screen";

@@ -1,0 +1,32 @@
+/*
+ LTHPasscodeViewController.strings
+ */
+"Enter Passcode" = "أدخل رقم سري";
+
+"Enter your old passcode" = "أدخل الرقم السري القديم";
+
+"Enter your passcode" = "أدخل رقمك السري";
+
+"Passcode info" = "سوف يطلب منك إدخال هذا الرمز عند فتح التطبيق";
+
+"Enable Passcode" = "تفعيل رقم سري";
+
+"Change Passcode" = "أختر رقم سري";
+
+"Turn Off Passcode" = "إيقاف تشغيل الرقم السري";
+
+"Re-enter your passcode" = "الرجا اعادة الرقم السري";
+
+"Re-enter your new passcode" = "إعادة إدخال الرقم السري الجديد";
+
+"Enter your new passcode" = "أدخل رقم سري الجديد";
+
+"Passcodes did not match. Try again." = "الرقم السري غير متطابق. حاول مرة أخرى.";
+
+"1 Passcode Failed Attempt" = "1 الرقم السري المحاولة الفاشلة";
+
+"%i Passcode Failed Attempts" = "%i الرقم السري فشل محاولات";
+
+"Unlock using Touch ID" = "فتح باستخدام معرف البصمة";
+
+"Cannot reuse the same passcode" = "لا يمكن إعادة استخدام نفس الرقم السري";

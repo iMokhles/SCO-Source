@@ -1,0 +1,101 @@
+"STORIES_TITLE" = "Hikayeler";
+"STORIES_SHOW_DOWNLOAD_BUTTON" = "Hikayeleri İndirme Butonunu Göster";
+"STORIES_MANUALLY_MARK_SEEN" = "Hikayeleri Manuel Görüldü Olarak İşaretle";
+"STORIES_DISABLE_DISCOVERY" = "Keşfeti Devre Dışı Bırak";
+"SHOW_STORIES_TIME" = "Zamanlayıcı Hikayelerini Göster";
+
+// 2017-6-8
+"THANK2" = "Thanks | Fahd Al-Juwaisri";
+"THANK3" = "Thanks | Khalid Al-Dosari";
+"REESTABLISH" = "Başkalarının bilgisi olmadan sohbet Oku";
+"MASSAGE_REESTABLISH" = "Bu özelliği etkinleştirmek zaman özel mesajları sadece gönderemez. Sen bunları okuduğunuzu bilmeden mesajları okuyabilir";
+"TYPING" = "Diğer parti için yazma devre dışı bırak";
+"TEXT_LINE" = "Yazarken yeni satır ekle";
+"SC_LOOPS" = "Tekrar Oynatmayı Devre Dışı Bırakma Stori'yi";
+
+
+"CHATS_TITLE" = "Sohbet";
+"CHATS_MANUALLY_MARK_SEEN" = "Sohbeti Manuel Görüldü Olarak İşaretle";
+"CHATS_SHOW_DOWNLOAD_BUTTON" = "Snap İndirme Butonunu Göster";
+"CHATS_DISABLE_SCREENSHOT" = "Ekran Görüntüsünü Dışı Bırak";
+"CHATS_AUTO_SAVE_MESSAGE" = "Sohbeti Otomatik Kaydet";
+
+"SAVE_SETTINGS_TITLE" = "Ayarları Kaydet";
+"SAVE_NO_CONFIRMATION_ALERT" = "Tasarruf uyarılarını etkinleştirme";
+"SAVE_CUSTOM_ALBUM_ENABLE" = "Kişisel Albüme Kaydet";
+"SAVE_CUSTOM_ALBUM_NAME" = "Albüm Adı";
+
+"ADDONS_TITLE" = "Eklentiler";
+"UPLOAD_FROM_GALLERY" = "Galeriden Yükle";
+"IMAGE_EDITOR" = "Fotoğrafları Düzenle";
+"TAP_TO_RECORD_VIDEO" = "Videoları Kaydetmek İçin Uzun Dokunun";
+"INCREASE_VIDEO_DURATION" = "50 sn Video Kaydı";
+"INCREASE_VIDEO_DURATION_DESC" = "Kayıt 50 saniye boyunca etkinleştirildiğinde, uygulamayı arka plandan kapatın ve başarıyla çalışması için tekrar açın";
+
+
+"NewSnapchat" = "The application will be shut down from the background and restarted until the feature is enabled \n Note: This feature works on version 10.27.1 and less only";
+
+"LOCATION_ENABLE" = "Lokasyon Değiştir";
+"LOCATION_CHOOSE" = "Seç";
+
+"FILTERS_ENABLE" = "Filtreleri Etkinleştir";
+"FILTERS_VIEW" = "Filtreler";
+"DisableNewSnapchat" = "Disable New Snapchat";
+
+"SAVE_ALERT_IMAGE" = "📱 Fotoğrafı Film Rulosuna 📷 Kaydet";
+"SAVE_ALERT_VIDEO" = "📱 Videoyu Film Rulosuna 🎥 Kaydet";
+"SAVE_ALERT_CANCEL" = "❌ İptal";
+"SAVE_ALERT_CONFIRM" = "✅ Kaydet";
+
+"SETTINGS_ALERT_SNAPCHAT" = "SnapChat Ayarları 👻";
+"SETTINGS_ALERT_SCOTHMAN" = "SCOthman💛 Ayarları 👻";
+"SETTINGS" = "Ayarlar ⚙️";
+"CANCEL" = "İptal";
+
+"LOCAL_FILTERS" = "Lokasyon Filtreleri";
+"DELETE_FILTER" = " Filtreyi Sil";
+"THIS_WILL_REMOVE" = "Filtreyi Cihazdan Sil";
+"DELETE" = "Sil";
+"ADD_FILTER" = "Filtre Ekle";
+"OPEN_FOLDER" = "Klasörü Aç";
+"CHOOSE_IMAGE" = "Resmi Seç";
+"MSG_FILTER" = "Filtre resmi PNG formatında ve \n1080 x 1920 (9:16 orantısında)\n boyutlarında olmalı. Galeriden veya manuel olarak filtreler dizinine resim ekleyebilirsiniz.";
+"OPEN" = "Aç";
+"FILTERS_FOLDER" = "Filtre Klasörü";
+"FILTERS_FOLDER (%zd/%zd)" = "Filtre Klasörü (%zd/%zd)";
+
+"CITIES" = "Lokasyon Değiştir";
+"CUSTOM" = "Haritadan Seç";
+
+"NAME" = "İsim";
+"CANCEL_F" = "İptal";
+"DONE" = "Kaydedildi";
+"OPEN_FILZA" = "Filza'da aç";
+"OPEN_IFILE" = "iFile'da aç";
+"SUPPORT_PAYPAL" = "PayPal ile bağış yap";
+"PAYPAL" = "Bağış";
+"THANK" = "Teşekkürler";
+"WEBSITE" = "Yorum gönder";
+"DEVELOPIR" = "Geliştirici Othman Al-Omiry";
+"COPYRIGHT" = "Telif Hakkı © 2017 Othman Al-Omiry. Tüm Hakları Saklıdır.";
+"VERSION" = "SCOthman Versiyonu";
+"TANSLATION" = "Çeviri";
+"ABOUT" = "Geliştirici hakkında";
+"MANAGE_GROUPS" = "Grupları Yönet ⚙";
+"MANAGER" = "yönetici";
+"EDIT_GROUP" = "Grubu Düzenle";
+"NEW_GROUP" = "Yeni Grup";
+"GROUPS" = "Gruplar";
+"GROUP_NAME" = "Grup ismi";
+"FRIENDS" = "Arkadaş";
+"FRIEND_GROUPS" = "Arkadaş Grupları";
+"APP_PASSWORD_TITLE" = "App Passcode";
+"APP_PASSWORD_DELETE" = "Delete Passcode";
+"APP_PASSWORD_ENABLE" = "Enable Passcode";
+
+"SNAP6" = "Activate video recording 6 Snaps";
+"HD_PHOTO" = "Activate High Quality Image Upload";
+"BLOCKCALL" = "Block incoming call";
+"IPHONEX" = "Do not zoom video upload for iPhone";
+"IPHONEX_AL" = "Video upload fix from iPhoneX and no video zoom \n Note: When activating this feature please do not close the application from the background so as not to affect the dimensions of the application on the iPhone screen";
+
