@@ -13,7 +13,7 @@
 
 	NSString *selfKey = [self key];
 	NSString *selfPath = [self path];
-	UIImage *selfImage = [self image];
+//    UIImage *selfImage = [self image];
 
 	NSURL *pathUrl = [NSURL fileURLWithPath:selfPath];
 	NSString *urlPathAbs = [pathUrl absoluteString];

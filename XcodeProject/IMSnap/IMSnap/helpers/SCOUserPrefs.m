@@ -31,7 +31,7 @@
 	if (self) {
 		[self setPlistPath:arg1];
 		NSMutableDictionary *prefsMutableDict = [NSMutableDictionary dictionaryWithContentsOfFile:[self plistPath]];
-		BOOL boolVar = NO;
+//        BOOL boolVar = NO;
 		NSMutableDictionary *prefsDict = nil;
 		if (prefsMutableDict != nil) {
 			prefsDict = prefsMutableDict;
@@ -177,7 +177,7 @@
 	return isSaved;
 }
 - (void)removeObjectForKey:(id)arg1 {
-	[[self dictionary] setObject:nil forKey:arg1];
+	[[self dictionary] setObject:@(0) forKey:arg1];
 }
 
 

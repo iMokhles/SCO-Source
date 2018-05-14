@@ -126,7 +126,8 @@
 
 	if (isFilza) {
 		[newArray addObject:[[SCAppDelPrefs sharedInstance] localizedStringForKey:@"OPEN_FILZA"]];
-	} else {
+	}
+    if (isIFile) {
 		[newArray addObject:[[SCAppDelPrefs sharedInstance] localizedStringForKey:@"OPEN_IFILE"]];
 	}
 
@@ -142,7 +143,7 @@
 
 	[RMUniversalAlert showAlertInViewController:self
                                   withTitle:[[SCAppDelPrefs sharedInstance] localizedStringForKey:@"FILTERS_FOLDER"]
-                                    message:@""
+                                    message:fPath
                           cancelButtonTitle:[[SCAppDelPrefs sharedInstance] localizedStringForKey:@"CANCEL_F"]
                      destructiveButtonTitle:nil
                           otherButtonTitles:newArray
@@ -196,7 +197,7 @@
 	return [[self filters] count];
 }
 - (void)collectionView:(UICollectionView *)arg1 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-	SrCollectionViewCell *cell = [arg1 cellForItemAtIndexPath:indexPath];
+	SrCollectionViewCell *cell = (SrCollectionViewCell *)[arg1 cellForItemAtIndexPath:indexPath];
 	Sr *filter = [self.filters objectAtIndex:[indexPath item]];
 	if ([self.enabledFiltersKeys containsObject:filter.key]) {
 		[self.enabledFiltersKeys removeObject:filter.key];
@@ -220,6 +221,8 @@
 	[cell.imageView sd_setImageWithURL:filterUrl placeholderImage:[self emptyImage]];
 
 	[cell setFilterSelected:[self.enabledFiltersKeys containsObject:filter.key]];
+    
+    return cell;
 }
 
 - (UIImage *)emptyImage {

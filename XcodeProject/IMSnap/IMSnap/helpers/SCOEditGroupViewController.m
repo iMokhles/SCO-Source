@@ -33,12 +33,13 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  NSArray *allFriends = [[[objc_getClass("Manager") shared] user] friends];
+  NSArray *allFriends = (NSArray *)[[[objc_getClass("Manager") shared] user] friends];
   [self setAllFriends:allFriends];
 
   NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"nameToDisplay" ascending:YES]];
   NSArray *filtersArraySorted = [[self allFriends] sortedArrayUsingDescriptors:sortDescriptors];
-
+[self setAllFriends:filtersArraySorted];
+    
   NSString *titleString = nil;
   if ([self editingGroup]) {
     titleString = [[SCAppDelPrefs sharedInstance] localizedStringForKey:@"EDIT_GROUP"];
@@ -70,16 +71,17 @@
   }
   [self.navigationController popViewControllerAnimated:YES];
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)arg1 {
+
+- (long long)numberOfSectionsInTableView:(UITableView *)arg1 {
   return 2;
 }
-- (NSInteger)tableView:(UITableView *)arg1 numberOfRowsInSection:(NSInteger *)arg2 {
+- (long long)tableView:(UITableView *)arg1 numberOfRowsInSection:(long long)arg2 {
   if (arg2 == 1) {
     return [[self allFriends] count];
   }
   return 0;
 }
-- (UIView *)tableView:(UITableView *)arg1 viewForHeaderInSection:(NSInteger)arg2 {
+- (UIView *)tableView:(UITableView *)arg1 viewForHeaderInSection:(long long)arg2 {
   UIView *newView = [UIView new];
   UILabel *headerLabel = [[UILabel alloc] initWithFrame:self.view.frame];
   [headerLabel setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:11.0]];
@@ -96,7 +98,7 @@
 
   return newView;
 }
-- (CGFloat)tableView:(UITableView *)arg1 heightForHeaderInSection:(NSInteger)arg2 {
+- (double)tableView:(UITableView *)arg1 heightForHeaderInSection:(long long)arg2 {
   return 25.0;
 }
 - (UITableViewCell *)tableView:(UITableView *)arg1 cellForRowAtIndexPath:(NSIndexPath *)arg2 {

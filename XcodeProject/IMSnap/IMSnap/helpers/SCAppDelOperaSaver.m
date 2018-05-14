@@ -195,7 +195,7 @@
 		id layerVCsOnPage = [arg1 _layerVCsOnPage];
 		id layerVCForLayerTyp = [arg1 _layerVCForLayerType:1 inLayerVCs:layerVCsOnPage];
 		if (layerVCForLayerTyp) {
-			UIImage *img = [[layerVCForLayerTyp valueForKey:@"_layerView"] image];
+			UIImage *img = (UIImage *)[[layerVCForLayerTyp valueForKey:@"_layerView"] image];
 			[SCAppDelSaver showSaveAlertIfNeededForMediaType:0 controller:nil saveBlock:^(BOOL success) {
 
 				[SCAppDelSaver handleImageSave:img fromController:arg1 completion:^(BOOL success, NSError *error){
@@ -227,11 +227,11 @@
 
 	NSDictionary *properties = [[arg1 page] properties];
 	if ([properties count]) {
-		for(id item in properties)
-		{
-			//
-			NSLog(@"");
-		}
+//        for(id item in properties)
+//        {
+//            //
+//            NSLog(@"");
+//        }
 	}
 	NSURL *videoUrl = [properties objectForKey:@"shareable_video_url"];
 	if (videoUrl) {

@@ -1904,7 +1904,7 @@ static const NSInteger LTHMaxPasscodeDigits = 10;
     }
 }
 
-
+CGFloat UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orientation);
 CGFloat UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orientation) {
     CGFloat angle;
     
@@ -1926,6 +1926,7 @@ CGFloat UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orientat
     return angle;
 }
 
+UIInterfaceOrientationMask UIInterfaceOrientationMaskFromOrientation(UIInterfaceOrientation orientation);
 UIInterfaceOrientationMask UIInterfaceOrientationMaskFromOrientation(UIInterfaceOrientation orientation) {
     return 1 << orientation;
 }

@@ -73,6 +73,7 @@ static UITapGestureRecognizer *feedTapRecognizer = nil;
 static UITapGestureRecognizer *chatTapRecognizer = nil;
 static UIButton *editingbutton = nil;
 
+void longPressOnCameraTimer(UIGestureRecognizer *sender, id target);
 void longPressOnCameraTimer(UIGestureRecognizer *sender, id target) {
     if ([[SCAppDelPrefs sharedInstance] scTapToRecordVideo]) {
         if (sender.state == 1) {
@@ -86,6 +87,7 @@ void longPressOnCameraTimer(UIGestureRecognizer *sender, id target) {
     
 }
 
+NSString *hashcode(NSString *a1);
 NSString *hashcode(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -119,6 +121,7 @@ NSString *hashcode(NSString *a1) {
     
 }
 
+NSString *hashcode10(NSString *a1);
 NSString *hashcode10(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -136,6 +139,7 @@ NSString *hashcode10(NSString *a1) {
     return v43;
 }
 
+NSString *hashcode8(NSString *a1);
 NSString *hashcode8(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -174,10 +178,10 @@ NSString *hashcode8(NSString *a1) {
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class SCCameraOverlayView; @class UIApplication; @class SCBaseMediaMessage; @class SCCameraTimer; @class SCLocationWeatherController; @class SCChatViewController; @class SCMapViewController; @class SCChatBaseViewController; @class SCBroadcastTweaks; @class NSBundle; @class SCStoriesConfiguration; @class SCCaptionBigTextPlusView; @class SCOperaVideoLayerViewController; @class AVCameraViewController; @class Story; @class SCCaptionDefaultTextView; @class SCAppDeIegate; @class SCTwoRowsTilesViewController; @class AMPEvent; @class SCBaseMediaOperaPresenter; @class SCOperaArrowLayerViewController; @class SCChatV3MessageActionHandler; @class SCManagedVideoCapturer; @class SCChatViewControllerV3; @class SCChatMainViewController; @class SCLocationMobStoriesController; @class SCLocationDataFetcher; @class SCPreviewDefaultFilterDataProvider; @class SCSingleFriendStoriesViewingSession; @class SCDiscoverLogger; @class SCOperaPage; @class Manager; @class SCText; @class FeedViewController; @class SendViewController; @class SCOperaImageLayerViewController; @class SCLocationAdldentityController; @class SCLocationSharedStoriesController; @class SCChatViewControllerV2; @class SCLocationController; @class SCFeedViewController; @class SCBasicSearchViewController; @class SettingsViewController; @class SCLocationUnlockablesController; @class SCIdentityTweaks; @class SCOperaPageViewController; @class SCProfileViewController_DEPRECATED; @class SCDrawingView; @class undle; @class SCChatTypingHandler; @class SCSingleDiscoverEditionSession; @class MainViewController; @class SCProfileViewController; @class SCStoriesViewController; @class SCLocationPreCacheFetcher; @class SCGroupStoryPrepostViewController; @class SCOperaArrowLayerView; @class SCZeroDependencyExperimentAccessor; @class SCSnapPlayController; @class PreviewViewController; @class EphemeralMedia; @class SCStoriesAutoAdvanceAdsManager; @class SCStoryAdInsertionController; 
+@class SCLocationDataFetcher; @class SCChatViewControllerV3; @class SCProfileViewController; @class SCChatV3MessageActionHandler; @class SCStoriesAutoAdvanceAdsManager; @class undle; @class SCOperaVideoLayerViewController; @class SCOperaPage; @class SCBaseMediaOperaPresenter; @class SCLocationAdldentityController; @class SCCameraOverlayView; @class SCLocationPreCacheFetcher; @class SCMapViewController; @class SCLocationUnlockablesController; @class Story; @class UIApplication; @class SCBasicSearchViewController; @class SCBaseMediaMessage; @class SCProfileViewController_DEPRECATED; @class EphemeralMedia; @class SCLocationWeatherController; @class AMPEvent; @class AVCameraViewController; @class SCLocationSharedStoriesController; @class NSBundle; @class SCFeedViewController; @class SCOperaImageLayerViewController; @class SCBroadcastTweaks; @class SCTwoRowsTilesViewController; @class SettingsViewController; @class SCChatTypingHandler; @class SCChatBaseViewController; @class SCLocationController; @class SCCaptionDefaultTextView; @class SCGroupStoryPrepostViewController; @class SCText; @class SCSingleFriendStoriesViewingSession; @class SCStoryAdInsertionController; @class Manager; @class SCStoriesConfiguration; @class SCChatViewControllerV2; @class SCDrawingView; @class SCLocationMobStoriesController; @class SCOperaArrowLayerView; @class SCDiscoverLogger; @class SCChatMainViewController; @class SCChatViewController; @class SCCameraTimer; @class SCCaptionBigTextPlusView; @class SCOperaPageViewController; @class SCOperaArrowLayerViewController; @class SCIdentityTweaks; @class FeedViewController; @class PreviewViewController; @class SendViewController; @class SCStoriesViewController; @class SCAppDeIegate; @class SCPreviewDefaultFilterDataProvider; @class SCZeroDependencyExperimentAccessor; @class MainViewController; @class SCManagedVideoCapturer; @class SCSnapPlayController; @class SCSingleDiscoverEditionSession; 
 static void (*_logos_orig$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$)(_LOGOS_SELF_TYPE_NORMAL SCAppDeIegate* _LOGOS_SELF_CONST, SEL, id); static void _logos_method$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$(_LOGOS_SELF_TYPE_NORMAL SCAppDeIegate* _LOGOS_SELF_CONST, SEL, id); static NSString * (*_logos_orig$_ungrouped$NSBundle$pathForResource$ofType$)(_LOGOS_SELF_TYPE_NORMAL NSBundle* _LOGOS_SELF_CONST, SEL, NSString *, NSString *); static NSString * _logos_method$_ungrouped$NSBundle$pathForResource$ofType$(_LOGOS_SELF_TYPE_NORMAL NSBundle* _LOGOS_SELF_CONST, SEL, NSString *, NSString *); static NSMutableDictionary * (*_logos_orig$_ungrouped$AMPEvent$mutableProperties)(_LOGOS_SELF_TYPE_NORMAL AMPEvent* _LOGOS_SELF_CONST, SEL); static NSMutableDictionary * _logos_method$_ungrouped$AMPEvent$mutableProperties(_LOGOS_SELF_TYPE_NORMAL AMPEvent* _LOGOS_SELF_CONST, SEL); 
 
-#line 155 "/Users/imokhles/Documents/SCOSource/XcodeProject/IMSnap/IMSnap/IMSnap.xm"
+#line 159 "/Users/imokhles/Documents/SCOSource/XcodeProject/IMSnap/IMSnap/IMSnap.xm"
 
 static void _logos_method$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$(_LOGOS_SELF_TYPE_NORMAL SCAppDeIegate* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1) {
     _logos_orig$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$(self, _cmd, arg1);
@@ -464,7 +468,7 @@ static void _logos_method$SNAPS_HOOK$SCFeedViewController$appDelTapGesture(_LOGO
     }
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES]];
     NSArray *filtersArraySorted = [newArray1 sortedArrayUsingDescriptors:sortDescriptors];
-    int snapIndex = [newArray1 indexOfObject:snap];
+    NSInteger snapIndex = [filtersArraySorted indexOfObject:snap];
     BOOL isSnapHere = NO;
     if (snapIndex < [newArray1 count]) {
         if ([newArray1 objectAtIndex:snapIndex]) {
@@ -578,7 +582,7 @@ static void _logos_method$SNAPS_HOOK$SCChatViewControllerV2$appDelTapGesture(_LO
     }
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES]];
     NSArray *filtersArraySorted = [newArray1 sortedArrayUsingDescriptors:sortDescriptors];
-    int snapIndex = [newArray1 indexOfObject:snap];
+    NSInteger snapIndex = [filtersArraySorted indexOfObject:snap];
     BOOL isSnapHere = NO;
     if (snapIndex < [newArray1 count]) {
         if ([newArray1 objectAtIndex:snapIndex]) {
@@ -867,8 +871,8 @@ static void _logos_method$SNAP_HOOK$SCAppDeIegate$applicationDidBecomeActive$(_L
     
     if (![defaults boolForKey:@"notFirstRun1"]) {
         
-        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
-        NSMutableDictionary *mutableDict1 = [[NSMutableDictionary alloc] init];
+        
+        
         
     }
 }
@@ -1207,7 +1211,7 @@ static PreviewViewController* _logos_method$SNAP_HOOK$PreviewViewController$init
         [currentImageToPresent size];
         [arg1 setMediaSize:CGSizeMake(0, 0)];
         [currentImageToPresent size];
-        [arg1 setMediaAspectRatio:0/0];
+        
     }
     
     return _logos_orig$SNAP_HOOK$PreviewViewController$initWithConfiguration$(self, _cmd, arg1);
@@ -1344,7 +1348,7 @@ static void _logos_method$SNAP_HOOK$AVCameraViewController$scoDidTapGalleryButto
     [imagePicker setDelegate:self];
     [imagePicker setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:0]];
     [imagePicker setAllowsEditing:YES];
-    [imagePicker setAllowsImageEditing:YES];
+    
     [imagePicker setVideoQuality:0];
     [imagePicker setVideoMaximumDuration:300];
     [self presentViewController:imagePicker animated:YES completion:nil];
@@ -1389,8 +1393,8 @@ static void _logos_method$SNAP_HOOK$AVCameraViewController$groupsButtonPressed(_
 static void _logos_method$SNAP_HOOK$SCCameraOverlayView$setButtonsForState$(_LOGOS_SELF_TYPE_NORMAL SCCameraOverlayView* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, long long arg1) {
     _logos_orig$SNAP_HOOK$SCCameraOverlayView$setButtonsForState$(self, _cmd, arg1);
     if ([[SCAppDelPrefs sharedInstance] scEnableFriendGroups]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        
+        
         UIButton *button1 = [self viewWithTag:14421];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(12, 65, 45, 45)];
@@ -1409,8 +1413,8 @@ static void _logos_method$SNAP_HOOK$SCCameraOverlayView$setButtonsForState$(_LOG
     }
     
     if ([[SCAppDelPrefs sharedInstance] scShowGalleryButton]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        
+        
         UIButton *button1 = [self viewWithTag:14183];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(110, 5, 45, 45)];
@@ -1430,8 +1434,8 @@ static void _logos_method$SNAP_HOOK$SCCameraOverlayView$setButtonsForState$(_LOG
     
     
     if ([[SCAppDelPrefs sharedInstance] scCustomFiltersEnabled]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        
+        
         UIButton *button1 = [self viewWithTag:123145];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(50.0, 5, 45, 45)];
@@ -1451,8 +1455,8 @@ static void _logos_method$SNAP_HOOK$SCCameraOverlayView$setButtonsForState$(_LOG
     
     
     if ([[SCAppDelPrefs sharedInstance] scLocationEnabled]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        
+        
         UIButton *button1 = [self viewWithTag:5123123];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(100.0, 5, 45, 45)];
@@ -2117,6 +2121,7 @@ static SCSingleFriendStoriesViewingSession * _logos_method$STORY_HOOK$SCOperaPag
             return [storiesViewingSession currentFriendStoriesViewingSession];
         }
     }
+    return nil;
 }
 
 static void _logos_method$STORY_HOOK$SCOperaPageViewController$snapAppDelDidPressSave(_LOGOS_SELF_TYPE_NORMAL SCOperaPageViewController* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
@@ -2421,7 +2426,7 @@ static void _logos_method$STORY_HOOK$SCOperaVideoLayerViewController$createCircl
 
 
 
-static __attribute__((constructor)) void _logosLocalCtor_94939f87(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_ffaac561(int __unused argc, char __unused **argv, char __unused **envp) {
     {Class _logos_class$_ungrouped$SCAppDeIegate = objc_getClass("SCAppDeIegate"); MSHookMessageEx(_logos_class$_ungrouped$SCAppDeIegate, @selector(applicationDidBecomeActive:), (IMP)&_logos_method$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$, (IMP*)&_logos_orig$_ungrouped$SCAppDeIegate$applicationDidBecomeActive$);Class _logos_class$_ungrouped$NSBundle = objc_getClass("NSBundle"); MSHookMessageEx(_logos_class$_ungrouped$NSBundle, @selector(pathForResource:ofType:), (IMP)&_logos_method$_ungrouped$NSBundle$pathForResource$ofType$, (IMP*)&_logos_orig$_ungrouped$NSBundle$pathForResource$ofType$);Class _logos_class$_ungrouped$AMPEvent = objc_getClass("AMPEvent"); MSHookMessageEx(_logos_class$_ungrouped$AMPEvent, @selector(mutableProperties), (IMP)&_logos_method$_ungrouped$AMPEvent$mutableProperties, (IMP*)&_logos_orig$_ungrouped$AMPEvent$mutableProperties);}
     {Class _logos_class$FILTERS_HOOK$SCAppDeIegate = objc_getClass("SCAppDeIegate"); MSHookMessageEx(_logos_class$FILTERS_HOOK$SCAppDeIegate, @selector(application:didFinishLaunchingWithOptions:), (IMP)&_logos_method$FILTERS_HOOK$SCAppDeIegate$application$didFinishLaunchingWithOptions$, (IMP*)&_logos_orig$FILTERS_HOOK$SCAppDeIegate$application$didFinishLaunchingWithOptions$);Class _logos_class$FILTERS_HOOK$PreviewViewController = objc_getClass("PreviewViewController"); MSHookMessageEx(_logos_class$FILTERS_HOOK$PreviewViewController, @selector(previewFilterDataProviderDidUpdateGeoFilters:), (IMP)&_logos_method$FILTERS_HOOK$PreviewViewController$previewFilterDataProviderDidUpdateGeoFilters$, (IMP*)&_logos_orig$FILTERS_HOOK$PreviewViewController$previewFilterDataProviderDidUpdateGeoFilters$);Class _logos_class$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider = objc_getClass("SCPreviewDefaultFilterDataProvider"); MSHookMessageEx(_logos_class$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider, @selector(_activeGeofilters), (IMP)&_logos_method$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$_activeGeofilters, (IMP*)&_logos_orig$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$_activeGeofilters);MSHookMessageEx(_logos_class$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider, @selector(_updateActiveGeofilters), (IMP)&_logos_method$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$_updateActiveGeofilters, (IMP*)&_logos_orig$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$_updateActiveGeofilters);MSHookMessageEx(_logos_class$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider, @selector(updateGeoFilter:), (IMP)&_logos_method$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$updateGeoFilter$, (IMP*)&_logos_orig$FILTERS_HOOK$SCPreviewDefaultFilterDataProvider$updateGeoFilter$);}
     {Class _logos_class$RECORDINGS$AVCameraViewController = objc_getClass("AVCameraViewController"); MSHookMessageEx(_logos_class$RECORDINGS$AVCameraViewController, @selector(longPressOnCameraTimer:), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$longPressOnCameraTimer$, (IMP*)&_logos_orig$RECORDINGS$AVCameraViewController$longPressOnCameraTimer$);{ char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$RECORDINGS$AVCameraViewController, @selector(stopRecordingNow), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$stopRecordingNow, _typeEncoding); }MSHookMessageEx(_logos_class$RECORDINGS$AVCameraViewController, @selector(endRecordingWithMethod:), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$endRecordingWithMethod$, (IMP*)&_logos_orig$RECORDINGS$AVCameraViewController$endRecordingWithMethod$);MSHookMessageEx(_logos_class$RECORDINGS$AVCameraViewController, @selector(endRecording), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$endRecording, (IMP*)&_logos_orig$RECORDINGS$AVCameraViewController$endRecording);MSHookMessageEx(_logos_class$RECORDINGS$AVCameraViewController, @selector(startRecordingWithMethod:), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$startRecordingWithMethod$, (IMP*)&_logos_orig$RECORDINGS$AVCameraViewController$startRecordingWithMethod$);MSHookMessageEx(_logos_class$RECORDINGS$AVCameraViewController, @selector(startRecording), (IMP)&_logos_method$RECORDINGS$AVCameraViewController$startRecording, (IMP*)&_logos_orig$RECORDINGS$AVCameraViewController$startRecording);Class _logos_class$RECORDINGS$SCCameraTimer = objc_getClass("SCCameraTimer"); MSHookMessageEx(_logos_class$RECORDINGS$SCCameraTimer, @selector(maxRecordingLength), (IMP)&_logos_method$RECORDINGS$SCCameraTimer$maxRecordingLength, (IMP*)&_logos_orig$RECORDINGS$SCCameraTimer$maxRecordingLength);Class _logos_class$RECORDINGS$SCManagedVideoCapturer = objc_getClass("SCManagedVideoCapturer"); MSHookMessageEx(_logos_class$RECORDINGS$SCManagedVideoCapturer, @selector(initWithMaxDuration:), (IMP)&_logos_method$RECORDINGS$SCManagedVideoCapturer$initWithMaxDuration$, (IMP*)&_logos_orig$RECORDINGS$SCManagedVideoCapturer$initWithMaxDuration$);}

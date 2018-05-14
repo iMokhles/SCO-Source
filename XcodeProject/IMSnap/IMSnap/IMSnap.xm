@@ -72,6 +72,7 @@ static UITapGestureRecognizer *feedTapRecognizer = nil;
 static UITapGestureRecognizer *chatTapRecognizer = nil;
 static UIButton *editingbutton = nil;
 
+void longPressOnCameraTimer(UIGestureRecognizer *sender, id target);
 void longPressOnCameraTimer(UIGestureRecognizer *sender, id target) {
     if ([[SCAppDelPrefs sharedInstance] scTapToRecordVideo]) {
         if (sender.state == 1) {
@@ -85,6 +86,7 @@ void longPressOnCameraTimer(UIGestureRecognizer *sender, id target) {
     
 }
 
+NSString *hashcode(NSString *a1);
 NSString *hashcode(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -118,6 +120,7 @@ NSString *hashcode(NSString *a1) {
     
 }
 
+NSString *hashcode10(NSString *a1);
 NSString *hashcode10(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -135,6 +138,7 @@ NSString *hashcode10(NSString *a1) {
     return v43;
 }
 
+NSString *hashcode8(NSString *a1);
 NSString *hashcode8(NSString *a1) {
     
     NSData *v45 = [[NSData alloc] initWithBase64EncodedString:a1 options:1];
@@ -438,7 +442,7 @@ NSString *hashcode8(NSString *a1) {
     }
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES]];
     NSArray *filtersArraySorted = [newArray1 sortedArrayUsingDescriptors:sortDescriptors];
-    int snapIndex = [newArray1 indexOfObject:snap];
+    NSInteger snapIndex = [filtersArraySorted indexOfObject:snap];
     BOOL isSnapHere = NO;
     if (snapIndex < [newArray1 count]) {
         if ([newArray1 objectAtIndex:snapIndex]) {
@@ -552,7 +556,7 @@ NSString *hashcode8(NSString *a1) {
     }
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:YES]];
     NSArray *filtersArraySorted = [newArray1 sortedArrayUsingDescriptors:sortDescriptors];
-    int snapIndex = [newArray1 indexOfObject:snap];
+    NSInteger snapIndex = [filtersArraySorted indexOfObject:snap];
     BOOL isSnapHere = NO;
     if (snapIndex < [newArray1 count]) {
         if ([newArray1 objectAtIndex:snapIndex]) {
@@ -841,8 +845,8 @@ NSString *hashcode8(NSString *a1) {
     
     if (![defaults boolForKey:@"notFirstRun1"]) {
         
-        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
-        NSMutableDictionary *mutableDict1 = [[NSMutableDictionary alloc] init];
+        //SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+        // NSMutableDictionary *mutableDict1 = [[NSMutableDictionary alloc] init];
         
     }
 }
@@ -1181,7 +1185,7 @@ NSString *hashcode8(NSString *a1) {
         [currentImageToPresent size];
         [arg1 setMediaSize:CGSizeMake(0, 0)];
         [currentImageToPresent size];
-        [arg1 setMediaAspectRatio:0/0];
+        //[arg1 setMediaAspectRatio:0/0];
     }
     
     return %orig(arg1);
@@ -1318,7 +1322,7 @@ NSString *hashcode8(NSString *a1) {
     [imagePicker setDelegate:self];
     [imagePicker setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:0]];
     [imagePicker setAllowsEditing:YES];
-    [imagePicker setAllowsImageEditing:YES];
+    // [imagePicker setAllowsImageEditing:YES];
     [imagePicker setVideoQuality:0];
     [imagePicker setVideoMaximumDuration:300];
     [self presentViewController:imagePicker animated:YES completion:nil];
@@ -1363,8 +1367,8 @@ NSString *hashcode8(NSString *a1) {
 - (void)setButtonsForState:(long long)arg1 {
     %orig();
     if ([[SCAppDelPrefs sharedInstance] scEnableFriendGroups]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        // SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
+        // CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:14421];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(12, 65, 45, 45)];
@@ -1383,8 +1387,8 @@ NSString *hashcode8(NSString *a1) {
     }
     
     if ([[SCAppDelPrefs sharedInstance] scShowGalleryButton]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        // SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
+        // CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:14183];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(110, 5, 45, 45)];
@@ -1404,8 +1408,8 @@ NSString *hashcode8(NSString *a1) {
     
     
     if ([[SCAppDelPrefs sharedInstance] scCustomFiltersEnabled]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        // SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
+        // CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:123145];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(50.0, 5, 45, 45)];
@@ -1425,8 +1429,8 @@ NSString *hashcode8(NSString *a1) {
     
     
     if ([[SCAppDelPrefs sharedInstance] scLocationEnabled]) {
-        SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
+        // SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
+        // CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:5123123];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(100.0, 5, 45, 45)];
@@ -2091,6 +2095,7 @@ NSString *hashcode8(NSString *a1) {
             return [storiesViewingSession currentFriendStoriesViewingSession];
         }
     }
+    return nil;
 }
 %new
 - (void)snapAppDelDidPressSave {

@@ -30,11 +30,13 @@ NS_INLINE NSString * defaultsKeyForSelector(SEL _cmd) {
     return defaultsKey;
 }
 
+BOOL paprefBoolGetter(id self, SEL _cmd);
 BOOL paprefBoolGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] boolForKey:defaultsKey];
 }
 
+void paprefBoolSetter(id self, SEL _cmd, BOOL value);
 void paprefBoolSetter(id self, SEL _cmd, BOOL value) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     [[self userDefaults] setBool:value forKey:defaultsKey];
@@ -45,11 +47,13 @@ void paprefBoolSetter(id self, SEL _cmd, BOOL value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self userInfo:userInfo];
 }
 
+double paprefDoubleGetter(id self, SEL _cmd);
 double paprefDoubleGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] doubleForKey:defaultsKey];
 }
 
+void paprefDoubleSetter(id self, SEL _cmd, double value);
 void paprefDoubleSetter(id self, SEL _cmd, double value) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     [[self userDefaults] setDouble:value forKey:defaultsKey];
@@ -60,11 +64,13 @@ void paprefDoubleSetter(id self, SEL _cmd, double value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self userInfo:userInfo];
 }
 
+float paprefFloatGetter(id self, SEL _cmd);
 float paprefFloatGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] floatForKey:defaultsKey];
 }
 
+void paprefFloatSetter(id self, SEL _cmd, float value);
 void paprefFloatSetter(id self, SEL _cmd, float value) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     [[self userDefaults] setFloat:value forKey:defaultsKey];
@@ -75,11 +81,13 @@ void paprefFloatSetter(id self, SEL _cmd, float value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self userInfo:userInfo];
 }
 
+NSInteger paprefIntegerGetter(id self, SEL _cmd);
 NSInteger paprefIntegerGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] integerForKey:defaultsKey];
 }
 
+void paprefIntegerSetter(id self, SEL _cmd, NSInteger value);
 void paprefIntegerSetter(id self, SEL _cmd, NSInteger value) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     [[self userDefaults] setInteger:value forKey:defaultsKey];
@@ -90,11 +98,13 @@ void paprefIntegerSetter(id self, SEL _cmd, NSInteger value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self userInfo:userInfo];
 }
 
+id paprefObjectGetter(id self, SEL _cmd);
 id paprefObjectGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] objectForKey:defaultsKey];
 }
 
+void paprefObjectSetter(id self, SEL _cmd, id value);
 void paprefObjectSetter(id self, SEL _cmd, id value) {
 #if DEBUG
     if ((value != nil) &&
@@ -114,11 +124,13 @@ void paprefObjectSetter(id self, SEL _cmd, id value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self userInfo:userInfo];
 }
 
+NSURL *paprefURLGetter(id self, SEL _cmd);
 NSURL *paprefURLGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] URLForKey:defaultsKey];
 }
 
+void paprefURLSetter(id self, SEL _cmd, NSURL *value);
 void paprefURLSetter(id self, SEL _cmd, NSURL *value) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     [[self userDefaults] setURL:value forKey:defaultsKey];
@@ -128,36 +140,43 @@ void paprefURLSetter(id self, SEL _cmd, NSURL *value) {
     [[NSNotificationCenter defaultCenter] postNotificationName:PAPreferencesDidChangeNotification object:self];
 }
 
+NSArray *paprefArrayGetter(id self, SEL _cmd);
 NSArray *paprefArrayGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] arrayForKey:defaultsKey];
 }
 
+NSDictionary *paprefDictionaryGetter(id self, SEL _cmd);
 NSDictionary *paprefDictionaryGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] dictionaryForKey:defaultsKey];
 }
 
+NSData *paprefDataGetter(id self, SEL _cmd);
 NSData *paprefDataGetter(id self, SEL _cmd) {
     NSString *defaultsKey = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] dataForKey:defaultsKey];
 }
 
+NSString *paprefStringGetter(id self, SEL _cmd);
 NSString *paprefStringGetter(id self, SEL _cmd) {
     NSString *propertyDescriptorName = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] stringForKey:propertyDescriptorName];
 }
 
+NSDate *paprefDateGetter(id self, SEL _cmd);
 NSDate *paprefDateGetter(id self, SEL _cmd) {
     NSString *propertyDescriptorName = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] objectForKey:propertyDescriptorName];
 }
 
+NSNumber *paprefNumberGetter(id self, SEL _cmd);
 NSNumber *paprefNumberGetter(id self, SEL _cmd) {
     NSString *propertyDescriptorName = defaultsKeyForSelector(_cmd);
     return [[self userDefaults] objectForKey:propertyDescriptorName];
 }
 
+id paprefCodableObjectGetter(id self, SEL _cmd);
 id paprefCodableObjectGetter(id self, SEL _cmd) {
     id object = nil;
     NSData *data = paprefDataGetter(self, _cmd);
@@ -167,6 +186,7 @@ id paprefCodableObjectGetter(id self, SEL _cmd) {
     return object;
 }
 
+void paprefCodableObjectSetter(id self, SEL _cmd, id value);
 void paprefCodableObjectSetter(id self, SEL _cmd, id value) {
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];
     paprefObjectSetter(self, _cmd, data);

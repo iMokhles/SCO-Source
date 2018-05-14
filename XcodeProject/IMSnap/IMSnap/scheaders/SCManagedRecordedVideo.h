@@ -23,7 +23,7 @@
 @property(readonly, copy, nonatomic) NSURL *rawVideoDataFileURL; // @synthesize rawVideoDataFileURL=_rawVideoDataFileURL;
 @property(readonly, copy, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
+//@property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)setBool:(_Bool)arg1 forUInt64Key:(unsigned long long)arg2;
 - (void)setObject:(id)arg1 forUInt64Key:(unsigned long long)arg2;
@@ -36,8 +36,8 @@
 - (id)initWithVideoURL:(id)arg1 rawVideoDataFileURL:(id)arg2 placeholderImage:(id)arg3 isFrontFacingCamera:(_Bool)arg4;
 
 // Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly) Class superclass;
+//@property(readonly, copy) NSString *debugDescription;
+//@property(readonly) Class superclass;
 
 @end
 

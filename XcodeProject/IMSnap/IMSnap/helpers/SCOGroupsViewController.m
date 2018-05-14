@@ -49,11 +49,11 @@
 - (void)addButtonPressed {
   [self showEditControllerWithGroup:nil];
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (long long)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [[self groups] count];
+- (long long)tableView:(UITableView *)tableView numberOfRowsInSection:(long long)section {
+    return [[self groups] count];
 }
 - (UITableViewCell *)tableView:(UITableView *)arg1 cellForRowAtIndexPath:(NSIndexPath *)arg2 {
   static NSString *identifier = @"cell";
@@ -82,7 +82,7 @@
 - (_Bool)tableView:(UITableView *)arg1 canEditRowAtIndexPath:(NSIndexPath *)arg2 {
     return YES;
 }
-- (void)tableView:(UITableView *)arg1 commitEditingStyle:(NSInteger)arg2 forRowAtIndexPath:(NSIndexPath *)arg3 {
+- (void)tableView:(UITableView *)arg1 commitEditingStyle:(long long)arg2 forRowAtIndexPath:(NSIndexPath *)arg3 {
   if (arg2 == 1) {
     SCOGroup *group = [[self groups] objectAtIndex:arg3.row];
     [SCOGroupsHelper deleteGroup:group];

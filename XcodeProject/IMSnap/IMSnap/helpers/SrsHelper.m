@@ -170,7 +170,7 @@
 	if (arg1) {
 		dict1 = arg1;
 	} else {
-		dict1 = @[];
+        dict1 = @{};
 	}
 	NSMutableDictionary *newDict = [NSMutableDictionary dictionaryWithDictionary:dict1];
 	NSDictionary *enabledSnapFitlers = [[SrsHelper sharedInstance] enabledFiltersDictionaryForSnapchat];

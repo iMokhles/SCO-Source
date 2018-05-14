@@ -376,6 +376,7 @@
     [section8 addCell:[FRPDeveloperCell cellWithTitle:@"Developer" detail:@"Othman AlOmiry (7arami)" image:nil url:@"http://twitter.com/OthmanAl3miry(7arami)"]];
 
     FRPreferences *table = [FRPreferences tableWithSections:@[
+        headerSection,
         section1,
         section2,
         section3,

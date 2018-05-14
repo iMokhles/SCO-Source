@@ -12,7 +12,7 @@
 + (void)configureCell:(UITableViewCell *)arg1 withLocation:(SCAppDelLocation *)arg2 {
 
 	[[arg1 textLabel] setText:[arg2 name]];
-	[[arg1 detailTextLabel] setText:[NSString stringWithFormat:@"%f %f", [arg2 latitude], [arg2 longitude]]];
+    [[arg1 detailTextLabel] setText:[NSString stringWithFormat:@"%ld %ld", (long)[arg2 latitude], (long)[arg2 longitude]]];
 }
 
 + (void)applyInitialCellConfigurations:(UITableViewCell *)arg1 {
@@ -21,7 +21,7 @@
 	[[arg1 textLabel] setFont:[UIFont systemFontOfSize:15.0]];
 }
 - (void)updateSearchResultsForSearchController:(UISearchController *)arg1 {
-	SCAppDelLocationPickerResults *resultsController = [arg1 searchResultsController];
+	SCAppDelLocationPickerResults *resultsController = (SCAppDelLocationPickerResults *)[arg1 searchResultsController];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[cd] %@", arg1.searchBar.text];
 	NSMutableArray *locs = [self locations];
 	NSArray *results = [locs filteredArrayUsingPredicate:predicate];

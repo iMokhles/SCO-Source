@@ -19,7 +19,7 @@
 @property(copy, nonatomic) NSString *locationId; // @synthesize locationId=_locationId;
 @property(copy, nonatomic) NSArray *geoFenceLocationPoints; // @synthesize geoFenceLocationPoints=_geoFenceLocationPoints;
 @property(nonatomic) _Bool hasContextCards; // @synthesize hasContextCards=_hasContextCards;
-@property(readonly) unsigned long long hash;
+//@property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (double)geoFenceArea;
 - (_Bool)geoFenceAreaIsTooSmallForAccuracy:(double)arg1;

@@ -5,6 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AWNavigationMenuItem.h"
 
 //#import "SCAddToGroupViewControllerDelegate-Protocol.h"
 //#import "SCBlockedExceptionAlertControllerDelegate-Protocol.h"
@@ -24,7 +25,7 @@
 //@class FBKVOController, Friend, NSString, NSTimer, SCBlockedExceptionAlertViewController, SCContactsCTAFooterView, SCFeedVerticalPresenter, SCFindFriendMenuViewController, SCHeader, SCInvalidFriendAlertView, SCLocationController, SCMaxBatchGroupCreationAlertView, SCMaxGroupSizeAlertView, SCOurStoryContentReplacement, SCPreviewTooltipBalloon, SCReplyParameters, SCSelectRecipientsConfiguration, SCSelectRecipientsView, SCSendConfirmationView, SCUserSession, UIButton, UIView;
 //@protocol SCAddToGroupViewControllerProtocol, SCSendPreviewViewModel, SCSendViewControllerSendingDelegate, SCStartChatDelegate, SendSnapNavigationControllerDelegate, UIViewControllerAnimatedTransitioning><UIViewControllerTransitioningDelegate;
 
-@interface SendViewController : UIViewController
+@interface SendViewController : UIViewController <AWNavigationMenuItemDataSource, AWNavigationMenuItemDelegate>
 ////<SCSelectGroupRecipientsDelegate, SCSendConfirmationViewControllerDelegate, SCHeaderDataSource, SCHeaderDelegate, SCTimeProfilable, SCAddToGroupViewControllerDelegate, SCSendViewControllerDismissalAnimatorDelegate, UINavigationControllerDelegate, SCMiniProfileViewControllerDelegate, SCBlockedExceptionAlertControllerDelegate, SCInvalidFriendAlertViewDelegate, SCSelectTopicRecipientDelegate, SCGroupMiniProfileViewControllerDelegate, SCSendToViewController>
 //{
 ////    SCUserSession *_userSession;

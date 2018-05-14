@@ -41,9 +41,9 @@
 - (void)loadPreferencesOnViewController:(id)arg1;
 
 // Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
+//@property(readonly, copy) NSString *debugDescription;
+//@property(readonly, copy) NSString *description;
+//@property(readonly) unsigned long long hash;
 @property(nonatomic) _Bool scAutoSaveMessages; // @dynamic scAutoSaveMessages;
 @property(nonatomic) _Bool scBlockCall; // @dynamic scBlockCall;
 @property(nonatomic) _Bool scCustomFiltersEnabled; // @dynamic scCustomFiltersEnabled;
@@ -71,7 +71,7 @@
 @property(nonatomic) _Bool scTextView; // @dynamic scTextView;
 @property(nonatomic) _Bool scTyping; // @dynamic scTyping;
 @property(nonatomic) _Bool sciPad; // @dynamic sciPad;
-@property(readonly) Class superclass;
+//@property(readonly) Class superclass;
 
 @end
 
