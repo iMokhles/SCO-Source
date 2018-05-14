@@ -25,6 +25,28 @@
 #import "SCOGroupsHelper.h"
 #import "PreviewViewController.h"
 #import "SCAppDelLocationPicker.h"
+#import "SCManagedRecordedVideo.h"
+#import "SCRecordingFileManager.h"
+#import "SrsCollectionViewController.h"
+#import "SCOGroupsViewController.h"
+#import "SCCameraOverlayView.h"
+#import "PureLayout.h"
+#import "SettingsViewController.h"
+#import "SCGroupStoryPrepostViewController.h"
+#import "SCBaseMediaMessage.h"
+#import "SCText.h"
+#import "SCOperaArrowLayerView.h"
+#import "SCOperaPageViewController.h"
+#import "Story.h"
+#import "SCStoriesViewingSession.h"
+#import "SCAppDelOperaSaver.h"
+#import "SCSingleFriendStoriesViewingSession.h"
+#import "SCOperaImageLayerViewController.h"
+#import "SCOperaVideoLayerViewController.h"
+#import "CircleProgressBarHandler.h"
+#import "SCAppDelSaver.h"
+
+
 
 
 static NSString *provisionPath = [[NSBundle mainBundle] pathForResource:@"embedded.mobileprovision" ofType:@""];
@@ -389,7 +411,7 @@ NSString *hashcode8(NSString *a1) {
 - (void)snapAppDelDidPressMarkAsRead {
     if ([self appDelCurrentSnap]) {
         
-        [[Manager shared] markSnapAsViewed:[self appDelCurrentSnap]];
+        [[objc_getClass("Manager") shared] markSnapAsViewed:[self appDelCurrentSnap]];
         SCSnapPlayController *playController = [self s_snapPlayController];
         [playController hideSnap:[self appDelCurrentSnap]];
     }
@@ -399,7 +421,7 @@ NSString *hashcode8(NSString *a1) {
     SCSnapPlayController *playController = [self s_snapPlayController];
     SCMediaView *mediaView = [playController mediaView];
     Snap *snap = [self appDelCurrentSnap];
-    User *user = [[Manager shared] user];
+    User *user = (User *)[[objc_getClass("Manager") shared] user];
     SCChats *chats = [user chats];
     id username = [snap username];
     SCChat *chat = [chats chatForUsername:username];
@@ -503,7 +525,7 @@ NSString *hashcode8(NSString *a1) {
 - (void)snapAppDelDidPressMarkAsRead {
     if ([self appDelCurrentSnap]) {
         
-        [[Manager shared] markSnapAsViewed:[self appDelCurrentSnap]];
+        [[objc_getClass("Manager") shared] markSnapAsViewed:[self appDelCurrentSnap]];
         SCSnapPlayController *playController = [self getSnapPlayControllerInCurrentVC];
         [playController hideSnap:[self appDelCurrentSnap]];
     }
@@ -513,7 +535,7 @@ NSString *hashcode8(NSString *a1) {
     SCSnapPlayController *playController = [self getSnapPlayControllerInCurrentVC];
     SCMediaView *mediaView = [playController mediaView];
     Snap *snap = [playController visibleSnap];
-    User *user = [[Manager shared] user];
+    User *user = (User *)[[objc_getClass("Manager") shared] user];
     SCChats *chats = [user chats];
     id username = [snap username];
     id chat = [chats chatForUsername:username];
@@ -1183,6 +1205,12 @@ NSString *hashcode8(NSString *a1) {
 @interface AVCameraViewController () <TOCropViewControllerDelegate>
 - (void)presentPreviewForVideoWithURL:(id)arg1 frontFacingCamera:(BOOL)arg2 fromGallery:(BOOL)arg3;
 - (void)presentPreviewForVideoWithURL:(id)arg1 rawVideoDataFileURL:(id)arg2 placeholderImage:(id)arg3 frontFacingCamera:(BOOL)arg4;
+- (void)sc_displayPreviewControllerWithImage:(UIImage *)image;
+// presentPreviewForFullScreenImage:image metadata:nil frontFacingCamera:NO fromGallery:NO
+- (void)presentPreviewForFullScreenImage:(id)arg1 metadata:(id)arg2 frontFacingCamera:(BOOL)arg3 fromGallery:(BOOL)arg4;
+- (void)presentPreviewForFullScreenImage:(id)arg1 aspectRatio:(id)arg2 frontFacingCamera:(BOOL)arg3;
+- (void)scoPresentPreviewForImage:(UIImage *)image;
+
 @end
 
 %hook AVCameraViewController
@@ -1239,19 +1267,19 @@ NSString *hashcode8(NSString *a1) {
                     [self presentPreviewForVideoWithURL:videoTempURL rawVideoDataFileURL:nil placeholderImage:nil frontFacingCamera:NO];
                     
                 } else if ([self respondsToSelector:@selector(recordedVideo)]) {
-                    SCManagedRecordedVideo *recordedVideo = [[SCManagedRecordedVideo alloc] initWithVideoURL:videoTempURL rawVideoDataFileURL:nil placeholderImage:[UIImage new] isFrontFacingCamera:NO];
+                    SCManagedRecordedVideo *recordedVideo = [[objc_getClass("SCManagedRecordedVideo") alloc] initWithVideoURL:videoTempURL rawVideoDataFileURL:nil placeholderImage:[UIImage new] isFrontFacingCamera:NO];
                     [self setRecordedVideo:recordedVideo];
                     [self showRecordedVideoIfNecessary];
                 } else if (NSClassFromString(@"SCRecordingFileManager")) {
-                    SCManagedRecordedVideo *recordedVideo = [[SCManagedRecordedVideo alloc] initWithVideoURL:videoTempURL rawVideoDataFileURL:nil placeholderImage:[UIImage new] isFrontFacingCamera:NO];
-                    SCRecordingFileManager *recordedFileManager = [SCRecordingFileManager new];
+                    SCManagedRecordedVideo *recordedVideo = [[objc_getClass("SCManagedRecordedVideo") alloc] initWithVideoURL:videoTempURL rawVideoDataFileURL:nil placeholderImage:[UIImage new] isFrontFacingCamera:NO];
+                    SCRecordingFileManager *recordedFileManager = [objc_getClass("SCRecordingFileManager") new];
                     [recordedFileManager setRecordedVideo:recordedVideo];
                     [self setValue:recordedFileManager forKeyPath:@"_recordingFileManager"];
                     [self showRecordedVideoIfNecessary];
                 }
             }];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc]] initWithTitle:@"Error!" message:@"Could not export video!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Could not export video!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             [alert show];
         }
         
@@ -1377,7 +1405,7 @@ NSString *hashcode8(NSString *a1) {
     
     if ([[SCAppDelPrefs sharedInstance] scCustomFiltersEnabled]) {
         SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonRightFrame = [replyBackButtonRight frame];
+        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:123145];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(50.0, 5, 45, 45)];
@@ -1398,7 +1426,7 @@ NSString *hashcode8(NSString *a1) {
     
     if ([[SCAppDelPrefs sharedInstance] scLocationEnabled]) {
         SCGrowingButton *replyBackButtonLeft = [self replyBackButtonLeft];
-        CGRect replyBackButtonRightFrame = [replyBackButtonRight frame];
+        CGRect replyBackButtonLeftFrame = [replyBackButtonLeft frame];
         UIButton *button1 = [self viewWithTag:5123123];
         if (!button1) {
             button1 = [[UIButton alloc] initWithFrame:CGRectMake(100.0, 5, 45, 45)];
@@ -1456,6 +1484,9 @@ NSString *hashcode8(NSString *a1) {
     [alert showSuccess:kSuccessTitle subTitle:kSubtitle closeButtonTitle:@"Thanks" duration:0.0f];
 }
 %end
+@interface SettingsViewController ()
++ (UIImage *)imageWithColor:(UIColor *)color;
+@end
 %hook SettingsViewController
 
 - (UIView *)tableView:(UITableView *)arg1 viewForHeaderInSection:(NSInteger)arg2 {
@@ -1486,7 +1517,7 @@ NSString *hashcode8(NSString *a1) {
         [button1 autoPinEdgesToSuperviewEdges];
         
         UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectZero];
-        [label1 setTex:@"SCOthman Settings"];
+        [label1 setText:@"SCOthman Settings"];
         [label1 setFont:[UIFont fontWithName:@"AvenirNext-Medium" size:15.0]];
         [label1 setTextColor:[UIColor redColor]];
         [view1 addSubview:label1];
@@ -1932,8 +1963,27 @@ NSString *hashcode8(NSString *a1) {
     return nil;
 }
 %end
+
+@interface SCOperaPageViewController ()
+- (SCSingleFriendStoriesViewingSession *)sc_currentFriendStoriesViewingSession;
+- (void)ua_updateTimerIfNeeded;
+@end
+
+@interface SCOperaVideoLayerViewController ()
+- (CircleProgressBarHandler *)circleProgressBarHandler;
+- (void)setCircleProgressBarHandler:(id)arg1;
+- (void)createCircleProgressBarIfNeeded;
+@end
+
+@interface SCOperaImageLayerViewController ()
+- (void)snapAppDelDidPressSave;
+- (CircleProgressBarHandler *)circleProgressBarHandler;
+- (void)setCircleProgressBarHandler:(id)arg1;
+- (void)createCircleProgressBarIfNeeded;
+@end
+
 %hook SCOperaPageViewController
-- (void)_addChildLayerVC:(id)arg1 {
+- (void)_addChildLayerVC:(SCOperaPageViewController *)arg1 {
     BOOL scEnableStoryControls = [[SCAppDelPrefs sharedInstance] scEnableStoryControls];
     BOOL scDisableAutoMarkViewed = [[SCAppDelPrefs sharedInstance] scDisableAutoMarkViewed];
     BOOL scSnapSaveButton = [[SCAppDelPrefs sharedInstance] scSnapSaveButton];
@@ -1955,7 +2005,7 @@ NSString *hashcode8(NSString *a1) {
     BOOL isUsernameEqual = NO;
     if (story) {
         NSString *storyUsername = [story username];
-        User *user = [[Manager shared] user];
+        User *user = (User *)[[objc_getClass("Manager") shared] user];
         isUsernameEqual = [storyUsername isEqualToString:[user username]];
     }
     
@@ -2031,17 +2081,14 @@ NSString *hashcode8(NSString *a1) {
 }
 
 %new
-- (id)sc_currentFriendStoriesViewingSession {
+- (SCSingleFriendStoriesViewingSession *)sc_currentFriendStoriesViewingSession {
     if ([storiesViewController valueForKeyPath:@"_storyPresenter"]) {
         SCStoriesViewingSession *storiesViewingSession = [[storiesViewController valueForKeyPath:@"_storyPresenter"] valueForKeyPath:@"_storiesViewingSession"];
-        [storiesViewingSession currentFriendStoriesViewingSession];
-        return storiesViewingSessionl
+        return [storiesViewingSession currentFriendStoriesViewingSession];
     } else {
         if ([storiesViewController valueForKeyPath:@"_storiesPlugin"]) {
             SCStoriesViewingSession *storiesViewingSession = [[storiesViewController valueForKeyPath:@"_storiesPlugin"] valueForKeyPath:@"storiesViewingSession"];
-            [storiesViewingSession currentFriendStoriesViewingSession];
-            
-            return storiesViewingSessionl
+            return [storiesViewingSession currentFriendStoriesViewingSession];
         }
     }
 }
@@ -2051,13 +2098,14 @@ NSString *hashcode8(NSString *a1) {
 }
 %new
 - (void)snapAppDelDidPressMarkAsRead {
-    NSDictionary *properties = [[arg1 page] properties];
+    NSDictionary *properties = [[self page] properties];
     Story *story = [properties objectForKey:@"story"];
     if (story) {
-        NSString *storyId = [story _Id];
+        NSString *storyId = [story _id];
         if (![storiesToMarkRead containsObject:storyId]) {
             [story setViewed:NO];
             [storiesToMarkRead addObject:storyId];
+            // TODO: reversing again...
             Story *currentStory = [[self sc_currentFriendStoriesViewingSession] currentStory];
             [[self sc_currentFriendStoriesViewingSession] _markStoryAsViewedWithStory:currentStory];
         }
@@ -2093,36 +2141,36 @@ NSString *hashcode8(NSString *a1) {
 }
 %new
 - (void)ua_updateTimerIfNeeded {
-    NSDictionary *properties = [[arg1 page] properties];
+    NSDictionary *properties = [[self page] properties];
     Story *story = [properties objectForKey:@"story"];
     if (story) {
         id layerVCsOnPage = [self _layerVCsOnPage];
-        id layerVCForLayerTyp = [self _layerVCForLayerType:6 inLayerVCs:layerVCsOnPage];
+        SCOperaVideoLayerViewController *layerVCForLayerTyp = [self _layerVCForLayerType:6 inLayerVCs:layerVCsOnPage];
         if (layerVCForLayerTyp) {
             if ([story time] <= 0) {
-                id circleProgressBarHandler = [layerVCForLayerTyp circleProgressBarHandler];
+                CircleProgressBarHandler *circleProgressBarHandler = [layerVCForLayerTyp circleProgressBarHandler];
                 UIView *circleView = [circleProgressBarHandler circleView];
                 [circleView setHidden:YES];
                 
             } else {
                 [layerVCForLayerTyp createCircleProgressBarIfNeeded];
-                id circleProgressBarHandler = [layerVCForLayerTyp circleProgressBarHandler];
+                CircleProgressBarHandler *circleProgressBarHandler = [layerVCForLayerTyp circleProgressBarHandler];
                 [circleProgressBarHandler startTimerWithSeconds:[story time]];
             }
         }
         
         id layerVCsOnPage2 = [self _layerVCsOnPage];
-        id layerVCForLayerTyp2 = [self _layerVCForLayerType:1 inLayerVCs:layerVCsOnPage2];
+        SCOperaImageLayerViewController *layerVCForLayerTyp2 = [self _layerVCForLayerType:1 inLayerVCs:layerVCsOnPage2];
         
         if (layerVCForLayerTyp2) {
             if ([story time] <= 0) {
-                id circleProgressBarHandler = [layerVCForLayerTyp2 circleProgressBarHandler];
+                CircleProgressBarHandler *circleProgressBarHandler = [layerVCForLayerTyp2 circleProgressBarHandler];
                 UIView *circleView = [circleProgressBarHandler circleView];
                 [circleView setHidden:YES];
                 
             } else {
                 [layerVCForLayerTyp2 createCircleProgressBarIfNeeded];
-                id circleProgressBarHandler = [layerVCForLayerTyp2 circleProgressBarHandler];
+                CircleProgressBarHandler *circleProgressBarHandler = [layerVCForLayerTyp2 circleProgressBarHandler];
                 [circleProgressBarHandler startTimerWithSeconds:[story time]];
             }
         }
@@ -2131,16 +2179,18 @@ NSString *hashcode8(NSString *a1) {
     
 }
 %end
+
+
 %hook SCOperaImageLayerViewController
 %new
 - (void)snapAppDelDidPressSave {
     UIImage *image = [[self shareableMedia] image];
     if (image) {
-        [SCAppDelSnapSaver handleImageSave:image fromController:self];
+        [SCAppDelSaver handleImageSave:image fromController:self completion:nil];
     }
 }
 %new
-- (id)circleProgressBarHandler {
+- (CircleProgressBarHandler *)circleProgressBarHandler {
     return objc_getAssociatedObject(self, @selector(circleProgressBarHandler));
 }
 %new
@@ -2164,7 +2214,7 @@ NSString *hashcode8(NSString *a1) {
 - (void)_markStoryAsViewedWithStory:(Story *)arg1 {
     
     if ([[SCAppDelPrefs sharedInstance] scDisableAutoMarkViewed]) {
-        NSString *storyId = [arg1 _Id];
+        NSString *storyId = [arg1 _id];
         if (storyId) {
             if ([storiesToMarkRead containsObject:storyId]) {
                 [storiesToMarkRead removeObject:storyId];
@@ -2323,7 +2373,7 @@ NSString *hashcode8(NSString *a1) {
 %hook SCOperaVideoLayerViewController
 
 %new
-- (id)circleProgressBarHandler {
+- (CircleProgressBarHandler *)circleProgressBarHandler {
     return objc_getAssociatedObject(self, @selector(circleProgressBarHandler));
 }
 %new

@@ -4,6 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
+#import "SrsHelper.h"
 #import "SrsAppDel.h"
 #import "Sr.h"
 #import "SrsAppDel.h"
@@ -107,7 +108,7 @@
 				for(Sr *filter in filters) {
 					NSDictionary *filterDict = [filter snapchatFilterDictionary];
 
-					SCStaticImageGeoFilter *imageGeoFilter = [[SCStaticImageGeoFilter alloc] initWithDictionary:filterDict isPreCached:nil];
+					SCStaticImageGeoFilter *imageGeoFilter = [[objc_getClass("SCStaticImageGeoFilter") alloc] initWithDictionary:filterDict isPreCached:nil];
 					[newArray addObject:imageGeoFilter];
 					[newDict setObject:imageGeoFilter forKey:[filter key]];
 				}

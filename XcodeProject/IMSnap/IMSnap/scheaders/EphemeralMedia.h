@@ -119,7 +119,7 @@
 //@property(nonatomic) double timeStartedViewing; // @synthesize timeStartedViewing=_timeStartedViewing;
 //@property(nonatomic) _Bool infiniteDuration; // @synthesize infiniteDuration=_infiniteDuration;
 //@property(nonatomic) double timeLeft; // @synthesize timeLeft=_timeLeft;
-//@property(nonatomic) double time; // @synthesize time=_time;
+@property(nonatomic) double time; // @synthesize time=_time;
 //@property(nonatomic) unsigned long long numberOfTimesReloaded; // @synthesize numberOfTimesReloaded=_numberOfTimesReloaded;
 //@property(copy, nonatomic) NSString *placeID; // @synthesize placeID=_placeID;
 //@property(copy, nonatomic) NSArray *captureLocationHistory; // @synthesize captureLocationHistory=_captureLocationHistory;
@@ -140,7 +140,7 @@
 //@property(nonatomic) long long animatedSnapType; // @synthesize animatedSnapType=_animatedSnapType;
 //@property(copy, nonatomic) NSString *attachmentUrl; // @synthesize attachmentUrl=_attachmentUrl;
 //@property(retain, nonatomic) NSString *captionText; // @synthesize captionText=_captionText;
-//@property(retain, nonatomic) NSString *_id; // @synthesize _id=__id;
+@property(retain, nonatomic) NSString *_id; // @synthesize _id=__id;
 //- (void).cxx_destruct;
 //- (_Bool)withAnimatedForODP;
 //- (void)fallbackToSendAsImageWithFilter:(id)arg1 error:(id)arg2;

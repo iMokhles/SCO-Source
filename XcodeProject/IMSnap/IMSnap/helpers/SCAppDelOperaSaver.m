@@ -62,7 +62,7 @@
 + (void)getVideoAndAudioURLsFromM3U8URL:(id)arg1 completion:(void (^)(NSURL *videoUrl, NSURL *audioUrl))arg2 {
     
 	[self downloadFileFromURL:arg1 completion:^(NSData *data, NSError *error) {
-		SCM3U8 *scmu8 = [[SCM3U8 alloc] initWithData:data];
+		SCM3U8 *scmu8 = [[objc_getClass("SCM3U8") alloc] initWithData:data];
 		NSArray *childM3U8Urls = [scmu8 childM3U8Urls];
 
 		NSPredicate *predicate1 = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
@@ -84,11 +84,11 @@
 
 		[self downloadFileFromURL:url1 completion:^(NSData *data, NSError *error) {
 
-			SCM3U8 *scmu82 = [[SCM3U8 alloc] initWithData:data];
+			SCM3U8 *scmu82 = [[objc_getClass("SCM3U8") alloc] initWithData:data];
 			NSURL *url3 = [[[scmu82 mediaSegmentInfos] lastObject] url];
 			[self downloadFileFromURL:url2 completion:^(NSData *data, NSError *error) {
 
-				SCM3U8 *scmu83 = [[SCM3U8 alloc] initWithData:data];
+				SCM3U8 *scmu83 = [[objc_getClass("SCM3U8") alloc] initWithData:data];
 				NSURL *url4 = [[[scmu83 mediaSegmentInfos] lastObject] url];
 
 				arg2(url3, url4);

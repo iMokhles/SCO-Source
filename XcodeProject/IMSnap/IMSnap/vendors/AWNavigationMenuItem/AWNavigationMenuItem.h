@@ -6,7 +6,8 @@
 //  Copyright © 2016 Abe Wang. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
 @class AWNavigationMenuItem;
 
 @protocol AWNavigationMenuItemDataSource <NSObject>

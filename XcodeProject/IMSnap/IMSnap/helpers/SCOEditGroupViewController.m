@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  NSArray *allFriends = [[[Manager shared] user] friends];
+  NSArray *allFriends = [[[objc_getClass("Manager") shared] user] friends];
   [self setAllFriends:allFriends];
 
   NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"nameToDisplay" ascending:YES]];

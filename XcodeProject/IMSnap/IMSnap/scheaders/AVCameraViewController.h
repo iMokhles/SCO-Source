@@ -6,8 +6,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SCPreviewPresenter.h"
+#import "SCManagedRecordedVideo.h"
 
-@class AVCameraViewController,
+
+@class AVCameraViewController;
 //SCCameraToGallerySwipeTransitionCoordinator, UILongPressGestureRecognizer, UIView;
 
 @protocol AVCameraViewControllerDelegate
@@ -32,7 +34,6 @@
 - (void)didEndRecording:(_Bool)arg1;
 - (void)didBeginRecording;
 @end
-
 
 //#import "LSASnapRecordingComponentListener-Protocol.h"
 //#import "SCCameraOverlayDelegate-Protocol.h"
@@ -71,7 +72,7 @@
 //@class NSDate, NSMutableSet, NSString, NSTimer, SCCameraOverlayView, SCCameraToGallerySwipeTransitionCoordinator, SCCameraVolumeButtonHandler, SCCaptionManager, SCCaptionState, SCCapturerToken, SCDeepLinkMiniProfileController, SCFeatureCoordinator, SCFeatureProvider, SCGalleryViewController, SCGradientView, SCLazy, SCLensInitLogger, SCLensOperaController, SCLensSnapcodeARExperienceController, SCLensSonicController, SCLensesUIAppearanceConfiguration, SCLensesUIControllerState, SCManagedCapturerState, SCManagedLensProcessorState, SCManagedRecordingInterruptionReporter, SCManagedVideoNoSoundLogger, SCMultiSnapCollectionViewController, SCMultiSnapSegment, SCMultiSnapV2CollectionViewController, SCPreviewPresenter, SCPromise, SCRecordingFileManager, SCReplyParameters, SCScopedAccess, SCShareUsernameController, SCShazamAudioCapturer, SCShazamConfiguration, SCShazamManager, SCSnapCraftRealTimeBaseController, SCSpringAnimationHeartbeat, SCUserSession, UIView;
 //@protocol AVCameraViewControllerDelegate, NavigationDelegate, SCChatQuickCaptionDelegate, SCLensCameraScreenDataProviderProtocol, SCSearchVPControlling, SCSnapSendPreparer, SCStartChatDelegate, SCSwipeViewParentDelegate, SendSnapNavigationControllerDelegate;
 
-@interface AVCameraViewController : UIViewController
+@interface AVCameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 //<SCOperaSilentlyPresentedProtocol, SCLensSnapcodeARExperienceControllerDelegate, SCLensOperaControllerDelegate, LSASnapRecordingComponentListener, SCManagedLensProcessorStateListener, SCLensRemoverProtocol, SCManagedCapturerListener, SCScanResultViewControllerDelegate, SCShareUsernameControllerDelegate, SCShazamManagerDelegate, SCLagunaEventListener, SCSearchVPControllingDelegate, SCScanPreviewControllerDelegate, SCSwipeTransitionCoordinatorDelegate, SCCameraPreviewEventDelegate, SCDeepLinkMiniProfileControllerDelegate, SCSearchSnapZoomLevelProviding, SCMiniProfileViewControllerDelegate, SCShakeToReportDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SCCameraVolumeButtonHandlerDelegate, SCTimeProfilable, SwipeView, UIGestureRecognizerDelegate, SCCameraOverlayDelegate, SCDeepLinkableViewSource, SCHydraReplySnapDelegate, SCChatQuickCaptionDelegate, SCLensBitmojiDelegate, SCGalleryViewControllerDelegate, SendSnapNavigationControllerDelegate, SCLagunaPairingDelegate>
 //{
 //    unsigned long long _context;
@@ -236,7 +237,9 @@
 //@property(nonatomic) __weak id <SendSnapNavigationControllerDelegate> sendSnapNavigationControllerDelegate; // @synthesize sendSnapNavigationControllerDelegate=_sendSnapNavigationControllerDelegate;
 //@property(retain, nonatomic) SCCameraOverlayView *cameraOverlay; // @synthesize cameraOverlay=_cameraOverlay;
 //@property(nonatomic) unsigned long long recordingState; // @synthesize recordingState=_recordingState;
-//@property(retain, nonatomic) UIView *cameraView; // @synthesize cameraView=_cameraView;
+@property(retain, nonatomic) UIView *cameraView; // @synthesize cameraView=_cameraView;
+@property(retain, nonatomic) SCManagedRecordedVideo *recordedVideo; // @synthesize cameraView=_cameraView;
+
 //@property(nonatomic) __weak id <SCSnapSendPreparer> snapSendPreparer; // @synthesize snapSendPreparer=_snapSendPreparer;
 //@property(nonatomic) __weak id <NavigationDelegate> navigationDelegate; // @synthesize navigationDelegate=_navigationDelegate;
 //@property(nonatomic) __weak id <SCSwipeViewParentDelegate> parentDelegate; // @synthesize parentDelegate=_parentDelegate;

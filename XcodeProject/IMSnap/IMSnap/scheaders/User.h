@@ -299,7 +299,7 @@
 //@property(retain) NSDate *accountCreationTimestamp; // @synthesize accountCreationTimestamp=_accountCreationTimestamp;
 //@property(retain) NSString *userId; // @synthesize userId=_userId;
 //@property(retain) NSString *email; // @synthesize email=_email;
-//@property(retain) NSString *username; // @synthesize username=_username;
+@property(retain) NSString *username; // @synthesize username=_username;
 ////@property(retain, nonatomic) SCClientEncryption *clientEncryption; // @synthesize clientEncryption=_clientEncryption;
 ////@property(retain, nonatomic) SCCPSessionDataStore *sccpDataStore; // @synthesize sccpDataStore=_sccpDataStore;
 //@property(retain, nonatomic) NSDate *updateTextSent; // @synthesize updateTextSent=_updateTextSent;

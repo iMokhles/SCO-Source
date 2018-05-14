@@ -192,7 +192,7 @@
 				for(Sr *filter in filters) {
 					NSDictionary *filterDict = [filter snapchatFilterDictionary];
 
-					SCStaticImageGeoFilter *imageGeoFilter = [[SCStaticImageGeoFilter alloc] initWithDictionary:filterDict isPreCached:nil];
+					SCStaticImageGeoFilter *imageGeoFilter = [[objc_getClass("SCStaticImageGeoFilter") alloc] initWithDictionary:filterDict isPreCached:nil];
 					[newArray addObject:imageGeoFilter];
 					[newDict setObject:imageGeoFilter forKey:[filter key]];
 				}

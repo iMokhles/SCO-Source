@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "Sr.h"
-#import "SCAppDelPrefs.h";
+#import "SCAppDelPrefs.h"
 
 @interface SrsHelper : NSObject
 

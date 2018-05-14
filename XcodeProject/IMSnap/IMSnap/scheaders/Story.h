@@ -230,7 +230,7 @@
 //@property(getter=isDeleting) _Bool deleting; // @synthesize deleting=_deleting;
 //@property _Bool needsAuthToFetch; // @synthesize needsAuthToFetch=_needsAuthToFetch;
 //@property(copy) NSString *flushableStoryId; // @synthesize flushableStoryId=_flushableStoryId;
-//@property _Bool viewed; // @synthesize viewed=_viewed;
+@property _Bool viewed; // @synthesize viewed=_viewed;
 //@property(retain) SCMapStoryInfo *mapStoryInfo; // @synthesize mapStoryInfo=_mapStoryInfo;
 //@property(copy, nonatomic) NSArray *associatedSearchStories; // @synthesize associatedSearchStories=_associatedSearchStories;
 //@property _Bool isCheetahStory; // @synthesize isCheetahStory=_isCheetahStory;
@@ -460,7 +460,7 @@
 //- (double)percentTimeLeft;
 //- (id)cacheThumbnailId;
 //- (id)posterUsername;
-//@property(copy) NSString *username;
+@property(copy) NSString *username;
 //- (id)copyWithZone:(struct _NSZone *)arg1;
 //- (id)initMyStoryWithSOJUCollabStoryLogbook:(id)arg1;
 //- (id)initMyStoryWithSOJUStoryLogbook:(id)arg1;

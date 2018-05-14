@@ -172,6 +172,20 @@
 		431B6E7320A1E0360077BA3D /* PreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 431B6E7220A1E0360077BA3D /* PreviewViewController.h */; };
 		431B6E7520A1E0D30077BA3D /* SCPreviewToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 431B6E7420A1E0D30077BA3D /* SCPreviewToolBar.h */; };
 		431B6E7720A1E4070077BA3D /* SCPreviewPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 431B6E7620A1E4070077BA3D /* SCPreviewPresenter.h */; };
+		4356835D20A90CDA00CFF577 /* SCManagedRecordedVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356835C20A90CD900CFF577 /* SCManagedRecordedVideo.h */; };
+		4356835F20A90CE800CFF577 /* SCManagedRecordedVideo-Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356835E20A90CE800CFF577 /* SCManagedRecordedVideo-Protocol.h */; };
+		4356836120A90DB400CFF577 /* SCRecordingFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836020A90DB400CFF577 /* SCRecordingFileManager.h */; };
+		4356836320A90F3B00CFF577 /* SCCameraOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836220A90F3B00CFF577 /* SCCameraOverlayView.h */; };
+		4356836520A90F8700CFF577 /* SCGrowingButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836420A90F8700CFF577 /* SCGrowingButton.h */; };
+		4356836720A911F100CFF577 /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836620A911F000CFF577 /* SettingsViewController.h */; };
+		4356836920A9120400CFF577 /* SCLeftSwipableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836820A9120400CFF577 /* SCLeftSwipableViewController.h */; };
+		4356836B20A913CB00CFF577 /* SCGroupStoryPrepostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836A20A913CB00CFF577 /* SCGroupStoryPrepostViewController.h */; };
+		4356836D20A9141C00CFF577 /* SCBaseMediaMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836C20A9141C00CFF577 /* SCBaseMediaMessage.h */; };
+		4356836F20A9142A00CFF577 /* SCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356836E20A9142A00CFF577 /* SCText.h */; };
+		4356837120A9144900CFF577 /* SCBaseMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356837020A9144900CFF577 /* SCBaseMessage.h */; };
+		4356837320A9150A00CFF577 /* SCOperaArrowLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356837220A9150A00CFF577 /* SCOperaArrowLayerView.h */; };
+		4356837520A9160F00CFF577 /* SCStoriesViewingSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356837420A9160F00CFF577 /* SCStoriesViewingSession.h */; };
+		4356837720A917E300CFF577 /* SCSingleFriendStoriesViewingSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 4356837620A917E300CFF577 /* SCSingleFriendStoriesViewingSession.h */; };
 		43D7000020A0EA84003C4412 /* PAPropertyDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D7FF6220A0EA83003C4412 /* PAPropertyDescriptor.m */; };
 		43D7000120A0EA84003C4412 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D7FF6420A0EA83003C4412 /* FLAnimatedImageView+WebCache.m */; };
 		43D7000220A0EA84003C4412 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D7FF6520A0EA83003C4412 /* UIImage+WebP.m */; };
@@ -334,6 +348,13 @@
 		43D7FFFD20A0EA84003C4412 /* PAPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D7FF5F20A0EA83003C4412 /* PAPreferences.m */; };
 		43D7FFFE20A0EA84003C4412 /* PAPropertyDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D7FF6020A0EA83003C4412 /* PAPropertyDescriptor.h */; };
 		43D7FFFF20A0EA84003C4412 /* PAPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D7FF6120A0EA83003C4412 /* PAPreferences.h */; };
+		43DAE5EF20A922D600C0AA92 /* SCOperaImageLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DAE5EE20A922D600C0AA92 /* SCOperaImageLayerViewController.h */; };
+		43DAE5F120A922E300C0AA92 /* SCOperaVideoLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DAE5F020A922E300C0AA92 /* SCOperaVideoLayerViewController.h */; };
+		43DAE5F320A9230600C0AA92 /* SCOperaLayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DAE5F220A9230600C0AA92 /* SCOperaLayerViewController.h */; };
+		43DAE5F520A9240A00C0AA92 /* CircleProgressBarHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DAE5F420A9240A00C0AA92 /* CircleProgressBarHandler.h */; };
+		43DAE5F920A9243900C0AA92 /* CircleProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE5F720A9243900C0AA92 /* CircleProgressBar.m */; };
+		43DAE5FA20A9243900C0AA92 /* CircleProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DAE5F820A9243900C0AA92 /* CircleProgressBar.h */; };
+		43DAE5FC20A9249B00C0AA92 /* CircleProgressBarHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DAE5FB20A9249B00C0AA92 /* CircleProgressBarHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -504,6 +525,21 @@
 		431B6E7220A1E0360077BA3D /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
 		431B6E7420A1E0D30077BA3D /* SCPreviewToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPreviewToolBar.h; sourceTree = "<group>"; };
 		431B6E7620A1E4070077BA3D /* SCPreviewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPreviewPresenter.h; sourceTree = "<group>"; };
+		4356835B20A90C7700CFF577 /* AVCameraViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCameraViewControllerDelegate.h; sourceTree = "<group>"; };
+		4356835C20A90CD900CFF577 /* SCManagedRecordedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCManagedRecordedVideo.h; sourceTree = "<group>"; };
+		4356835E20A90CE800CFF577 /* SCManagedRecordedVideo-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCManagedRecordedVideo-Protocol.h"; sourceTree = "<group>"; };
+		4356836020A90DB400CFF577 /* SCRecordingFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordingFileManager.h; sourceTree = "<group>"; };
+		4356836220A90F3B00CFF577 /* SCCameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCameraOverlayView.h; sourceTree = "<group>"; };
+		4356836420A90F8700CFF577 /* SCGrowingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGrowingButton.h; sourceTree = "<group>"; };
+		4356836620A911F000CFF577 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		4356836820A9120400CFF577 /* SCLeftSwipableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLeftSwipableViewController.h; sourceTree = "<group>"; };
+		4356836A20A913CB00CFF577 /* SCGroupStoryPrepostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGroupStoryPrepostViewController.h; sourceTree = "<group>"; };
+		4356836C20A9141C00CFF577 /* SCBaseMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBaseMediaMessage.h; sourceTree = "<group>"; };
+		4356836E20A9142A00CFF577 /* SCText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCText.h; sourceTree = "<group>"; };
+		4356837020A9144900CFF577 /* SCBaseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBaseMessage.h; sourceTree = "<group>"; };
+		4356837220A9150A00CFF577 /* SCOperaArrowLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOperaArrowLayerView.h; sourceTree = "<group>"; };
+		4356837420A9160F00CFF577 /* SCStoriesViewingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStoriesViewingSession.h; sourceTree = "<group>"; };
+		4356837620A917E300CFF577 /* SCSingleFriendStoriesViewingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSingleFriendStoriesViewingSession.h; sourceTree = "<group>"; };
 		43D7006520A0F0DB003C4412 /* SCStaticImageGeoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStaticImageGeoFilter.h; sourceTree = "<group>"; };
 		43D7006720A0F0E7003C4412 /* SCGeoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGeoFilter.h; sourceTree = "<group>"; };
 		43D7006920A0F0F4003C4412 /* SCGeofencedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGeofencedObject.h; sourceTree = "<group>"; };
@@ -672,6 +708,13 @@
 		43D7FFC620A0EA84003C4412 /* SCAppDelPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAppDelPrefs.h; sourceTree = "<group>"; };
 		43D7FFC720A0EA84003C4412 /* SCAppDelSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAppDelSaver.h; sourceTree = "<group>"; };
 		43D7FFC820A0EA84003C4412 /* SrsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SrsCollectionViewController.m; sourceTree = "<group>"; };
+		43DAE5EE20A922D600C0AA92 /* SCOperaImageLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOperaImageLayerViewController.h; sourceTree = "<group>"; };
+		43DAE5F020A922E300C0AA92 /* SCOperaVideoLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOperaVideoLayerViewController.h; sourceTree = "<group>"; };
+		43DAE5F220A9230600C0AA92 /* SCOperaLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOperaLayerViewController.h; sourceTree = "<group>"; };
+		43DAE5F420A9240A00C0AA92 /* CircleProgressBarHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressBarHandler.h; sourceTree = "<group>"; };
+		43DAE5F720A9243900C0AA92 /* CircleProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressBar.m; sourceTree = "<group>"; };
+		43DAE5F820A9243900C0AA92 /* CircleProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressBar.h; sourceTree = "<group>"; };
+		43DAE5FB20A9249B00C0AA92 /* CircleProgressBarHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressBarHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1024,6 +1067,23 @@
 		43D7006420A0F0BF003C4412 /* scheaders */ = {
 			isa = PBXGroup;
 			children = (
+				43DAE5F220A9230600C0AA92 /* SCOperaLayerViewController.h */,
+				43DAE5F020A922E300C0AA92 /* SCOperaVideoLayerViewController.h */,
+				43DAE5EE20A922D600C0AA92 /* SCOperaImageLayerViewController.h */,
+				4356837620A917E300CFF577 /* SCSingleFriendStoriesViewingSession.h */,
+				4356837420A9160F00CFF577 /* SCStoriesViewingSession.h */,
+				4356837220A9150A00CFF577 /* SCOperaArrowLayerView.h */,
+				4356837020A9144900CFF577 /* SCBaseMessage.h */,
+				4356836E20A9142A00CFF577 /* SCText.h */,
+				4356836C20A9141C00CFF577 /* SCBaseMediaMessage.h */,
+				4356836A20A913CB00CFF577 /* SCGroupStoryPrepostViewController.h */,
+				4356836820A9120400CFF577 /* SCLeftSwipableViewController.h */,
+				4356836620A911F000CFF577 /* SettingsViewController.h */,
+				4356836420A90F8700CFF577 /* SCGrowingButton.h */,
+				4356836220A90F3B00CFF577 /* SCCameraOverlayView.h */,
+				4356836020A90DB400CFF577 /* SCRecordingFileManager.h */,
+				4356835E20A90CE800CFF577 /* SCManagedRecordedVideo-Protocol.h */,
+				4356835C20A90CD900CFF577 /* SCManagedRecordedVideo.h */,
 				431B6E7620A1E4070077BA3D /* SCPreviewPresenter.h */,
 				431B6E7420A1E0D30077BA3D /* SCPreviewToolBar.h */,
 				431B6E7220A1E0360077BA3D /* PreviewViewController.h */,
@@ -1059,6 +1119,7 @@
 				43D7006720A0F0E7003C4412 /* SCGeoFilter.h */,
 				43D7006520A0F0DB003C4412 /* SCStaticImageGeoFilter.h */,
 				431B6D5D20A1C0FC0077BA3D /* SCMediaView.h */,
+				4356835B20A90C7700CFF577 /* AVCameraViewControllerDelegate.h */,
 			);
 			path = scheaders;
 			sourceTree = "<group>";
@@ -1156,6 +1217,7 @@
 		43D7FF2120A0EA83003C4412 /* vendors */ = {
 			isa = PBXGroup;
 			children = (
+				43DAE5F620A9243900C0AA92 /* CircleProgressBar */,
 				431B6DA620A1DF870077BA3D /* CLImageEditor */,
 				431B6D7D20A1DF620077BA3D /* TOCropViewController */,
 				431B6D6220A1DEF30077BA3D /* Reachability */,
@@ -1373,6 +1435,8 @@
 		43D7FFA420A0EA84003C4412 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				43DAE5F420A9240A00C0AA92 /* CircleProgressBarHandler.h */,
+				43DAE5FB20A9249B00C0AA92 /* CircleProgressBarHandler.m */,
 				43D7FFA520A0EA84003C4412 /* SCAppDelSnapSaver.m */,
 				43D7FFA620A0EA84003C4412 /* SrCollectionViewCell.h */,
 				43D7FFA720A0EA84003C4412 /* SCAppDelLocationPickerResults.m */,
@@ -1413,6 +1477,15 @@
 			path = helpers;
 			sourceTree = "<group>";
 		};
+		43DAE5F620A9243900C0AA92 /* CircleProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				43DAE5F720A9243900C0AA92 /* CircleProgressBar.m */,
+				43DAE5F820A9243900C0AA92 /* CircleProgressBar.h */,
+			);
+			path = CircleProgressBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1425,11 +1498,13 @@
 				431B6E5920A1DF870077BA3D /* CLGPUImageVignetteFilter.h in Headers */,
 				43D7005020A0EA84003C4412 /* SCOUserPrefs.h in Headers */,
 				43D7004720A0EA84003C4412 /* SCAppDelLocation.h in Headers */,
+				43DAE5FA20A9243900C0AA92 /* CircleProgressBar.h in Headers */,
 				431B6E7520A1E0D30077BA3D /* SCPreviewToolBar.h in Headers */,
 				43D7003620A0EA84003C4412 /* SDWebImageCompat.h in Headers */,
 				431B6D0B20A19FBE0077BA3D /* SCChat.h in Headers */,
 				431B6CFE20A121710077BA3D /* RMPopoverPresentationController.h in Headers */,
 				43D7003020A0EA84003C4412 /* SDWebImageCodersManager.h in Headers */,
+				4356837320A9150A00CFF577 /* SCOperaArrowLayerView.h in Headers */,
 				431B6E2D20A1DF870077BA3D /* CLAdjustmentTool.h in Headers */,
 				431B6E3720A1DF870077BA3D /* CLCircleView.h in Headers */,
 				431B6D5C20A1BE580077BA3D /* SCSnapPlayController.h in Headers */,
@@ -1440,6 +1515,7 @@
 				431B6D9920A1DF620077BA3D /* UIImage+CropRotate.h in Headers */,
 				431B6E7320A1E0360077BA3D /* PreviewViewController.h in Headers */,
 				431B6E3520A1DF870077BA3D /* CLImageToolBase.h in Headers */,
+				43DAE5F520A9240A00C0AA92 /* CircleProgressBarHandler.h in Headers */,
 				431B6E4220A1DF870077BA3D /* CLImageToolSettings.h in Headers */,
 				43D7FFEF20A0EA84003C4412 /* FRPViewCell.h in Headers */,
 				431B6D1F20A1AA970077BA3D /* Story.h in Headers */,
@@ -1467,8 +1543,11 @@
 				431B6E6C20A1DF870077BA3D /* CLStickerTool.h in Headers */,
 				431B6D1520A1A70E0077BA3D /* SCM3U8.h in Headers */,
 				43D7001C20A0EA84003C4412 /* UIView+WebCache.h in Headers */,
+				4356835F20A90CE800CFF577 /* SCManagedRecordedVideo-Protocol.h in Headers */,
 				431B6D9F20A1DF620077BA3D /* TOCropToolbar.h in Headers */,
 				431B6E6F20A1DF870077BA3D /* CLImageToolInfo.h in Headers */,
+				4356836320A90F3B00CFF577 /* SCCameraOverlayView.h in Headers */,
+				4356837120A9144900CFF577 /* SCBaseMessage.h in Headers */,
 				43D7FFCF20A0EA84003C4412 /* NSLayoutConstraint+PureLayout.h in Headers */,
 				431B6E3C20A1DF870077BA3D /* CLImageToolProtocol.h in Headers */,
 				431B6D9E20A1DF620077BA3D /* TOCropOverlayView.h in Headers */,
@@ -1479,6 +1558,7 @@
 				43D7FFE820A0EA84003C4412 /* FRPDeveloperCell.h in Headers */,
 				431B6E4320A1DF870077BA3D /* CLImageEditorTheme+Private.h in Headers */,
 				431B6E1C20A1DF870077BA3D /* CLHighlightShadowEffect.h in Headers */,
+				43DAE5EF20A922D600C0AA92 /* SCOperaImageLayerViewController.h in Headers */,
 				431B6D5020A1AE270077BA3D /* SCLTimerDisplay.h in Headers */,
 				431B6E6820A1DF870077BA3D /* CLEmoticonTool.h in Headers */,
 				431B6D4820A1AE270077BA3D /* SCLMacros.h in Headers */,
@@ -1487,6 +1567,7 @@
 				43D7FFEB20A0EA84003C4412 /* FRPSelectListTable.h in Headers */,
 				43D7002520A0EA84003C4412 /* UIImageView+HighlightedWebCache.h in Headers */,
 				43D7005520A0EA84003C4412 /* Sr.h in Headers */,
+				4356836F20A9142A00CFF577 /* SCText.h in Headers */,
 				431B6D4E20A1AE270077BA3D /* SCLAlertViewStyleKit.h in Headers */,
 				431B6E3820A1DF870077BA3D /* CLToolbarMenuItem.h in Headers */,
 				431B6D5F20A1DD340077BA3D /* SCChatViewControllerV2.h in Headers */,
@@ -1507,11 +1588,15 @@
 				431B6E2620A1DF870077BA3D /* CLGloomEffect.h in Headers */,
 				43D7001F20A0EA84003C4412 /* MKAnnotationView+WebCache.h in Headers */,
 				431B6D1E20A1AA970077BA3D /* Snap.h in Headers */,
+				4356836120A90DB400CFF577 /* SCRecordingFileManager.h in Headers */,
 				43D7006E20A0F25E003C4412 /* SCHeader.h in Headers */,
 				431B6E5320A1DF870077BA3D /* UIDevice+SystemVersion.h in Headers */,
+				43DAE5F120A922E300C0AA92 /* SCOperaVideoLayerViewController.h in Headers */,
 				431B6D9C20A1DF620077BA3D /* TOCropViewController-Bridging-Header.h in Headers */,
+				4356836B20A913CB00CFF577 /* SCGroupStoryPrepostViewController.h in Headers */,
 				431B6D9820A1DF620077BA3D /* TOCropViewControllerTransitioning.h in Headers */,
 				43D7007220A0F416003C4412 /* SCHeaderDelegate-Protocol.h in Headers */,
+				4356836D20A9141C00CFF577 /* SCBaseMediaMessage.h in Headers */,
 				43D7FFFE20A0EA84003C4412 /* PAPropertyDescriptor.h in Headers */,
 				431B6E6D20A1DF870077BA3D /* CLSplashTool.h in Headers */,
 				43D7FFFA20A0EA84003C4412 /* FRPSwitchCell.h in Headers */,
@@ -1519,10 +1604,12 @@
 				431B6E5B20A1DF870077BA3D /* CLTextLabel.h in Headers */,
 				43D7FFD720A0EA84003C4412 /* AWNavigationMenuItem.h in Headers */,
 				43D7002720A0EA84003C4412 /* SDWebImageManager.h in Headers */,
+				4356837720A917E300CFF577 /* SCSingleFriendStoriesViewingSession.h in Headers */,
 				431B6E5120A1DF870077BA3D /* CLClassList.h in Headers */,
 				43D7FFE720A0EA84003C4412 /* FRPCell.h in Headers */,
 				431B6D5220A1AE270077BA3D /* SCLTextView.h in Headers */,
 				431B6D4A20A1AE270077BA3D /* SCLAlertView.h in Headers */,
+				4356837520A9160F00CFF577 /* SCStoriesViewingSession.h in Headers */,
 				43D7005420A0EA84003C4412 /* SCAppDelLocationPickerResults.h in Headers */,
 				43D7005A20A0EA84003C4412 /* SCOEditGroupViewController.h in Headers */,
 				431B6E6620A1DF870077BA3D /* CLTextTool.h in Headers */,
@@ -1547,7 +1634,9 @@
 				431B6E6220A1DF870077BA3D /* CLPickerView.h in Headers */,
 				43D7006220A0EA84003C4412 /* SCAppDelSaver.h in Headers */,
 				431B6E1B20A1DF870077BA3D /* CLSpotEffect.h in Headers */,
+				43DAE5F320A9230600C0AA92 /* SCOperaLayerViewController.h in Headers */,
 				43D7000620A0EA84003C4412 /* UIImageView+WebCache.h in Headers */,
+				4356835D20A90CDA00CFF577 /* SCManagedRecordedVideo.h in Headers */,
 				43D7005B20A0EA84003C4412 /* SCOGroupsHelper.h in Headers */,
 				43D7004620A0EA84003C4412 /* SCOGroup.h in Headers */,
 				431B6D5620A1AE930077BA3D /* AVCameraViewController.h in Headers */,
@@ -1566,6 +1655,7 @@
 				43D7FFCB20A0EA84003C4412 /* PureLayoutDefines.h in Headers */,
 				431B6D0E20A19FD30077BA3D /* Friends.h in Headers */,
 				43D7FFEA20A0EA84003C4412 /* FRPValueCell.h in Headers */,
+				4356836520A90F8700CFF577 /* SCGrowingButton.h in Headers */,
 				431B6D1120A1A6190077BA3D /* SCStoriesViewController.h in Headers */,
 				431B6E3220A1DF870077BA3D /* CLFilterBase.h in Headers */,
 				43D7FFE020A0EA84003C4412 /* FRPListCell.h in Headers */,
@@ -1579,6 +1669,7 @@
 				43D7002420A0EA84003C4412 /* SDWebImageFrame.h in Headers */,
 				43D7004C20A0EA84003C4412 /* SrsAppDel.h in Headers */,
 				431B6E1620A1DF870077BA3D /* CLClippingTool.h in Headers */,
+				4356836720A911F100CFF577 /* SettingsViewController.h in Headers */,
 				43D7002D20A0EA84003C4412 /* FLAnimatedImageView.h in Headers */,
 				431B6E3120A1DF870077BA3D /* CLFilterTool.h in Headers */,
 				431B6E3620A1DF870077BA3D /* CLImageToolInfo+Private.h in Headers */,
@@ -1601,6 +1692,7 @@
 				431B6E5020A1DF870077BA3D /* UIImage+Utility.h in Headers */,
 				43D7003820A0EA84003C4412 /* UIImage+MultiFormat.h in Headers */,
 				431B6D0520A19D1F0077BA3D /* Manager.h in Headers */,
+				4356836920A9120400CFF577 /* SCLeftSwipableViewController.h in Headers */,
 				431B6E4820A1DF870077BA3D /* CLImageEditor.h in Headers */,
 				43D7004120A0EA84003C4412 /* SrCollectionViewCell.h in Headers */,
 			);
@@ -1710,6 +1802,7 @@
 				431B6D4D20A1AE270077BA3D /* SCLSwitchView.m in Sources */,
 				43D7000A20A0EA84003C4412 /* UIImageView+HighlightedWebCache.m in Sources */,
 				431B6D9320A1DF620077BA3D /* TOActivityCroppedImageProvider.m in Sources */,
+				43DAE5FC20A9249B00C0AA92 /* CircleProgressBarHandler.m in Sources */,
 				43D7000820A0EA84003C4412 /* SDWebImageManager.m in Sources */,
 				431B6D4F20A1AE270077BA3D /* SCLButton.m in Sources */,
 				43D7001820A0EA84003C4412 /* SDWebImageCoderHelper.m in Sources */,
@@ -1773,6 +1866,7 @@
 				43D7002920A0EA84003C4412 /* UIImageView+WebCache.m in Sources */,
 				43D7004920A0EA84003C4412 /* SCAppDelLocationPicker.m in Sources */,
 				43D7FFFB20A0EA84003C4412 /* FRPValueCell.m in Sources */,
+				43DAE5F920A9243900C0AA92 /* CircleProgressBar.m in Sources */,
 				43D7FFF920A0EA84003C4412 /* FRPSelectListTable.m in Sources */,
 				43D7002C20A0EA84003C4412 /* SDWebImageGIFCoder.m in Sources */,
 				431B6E2920A1DF870077BA3D /* CLEffectTool.m in Sources */,
